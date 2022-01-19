@@ -333,14 +333,14 @@ function DetailLaptop(props) {
           <div className={scroll ? "Detail-sticky-hidden" : "Detail-sticky"}>
             <div className="grid wide">
               <div className="row">
-                <div className="col l-2-4">
+                <div className="col l-2-4 m-1 c-1">
                   <div className="Detail-sticky-hotline">Hotline</div>
                   <div className="Detail-sticky-hotline-number">
                     1900.63.3579
                   </div>
                 </div>
-                <div className="col l-2-4" />
-                <div className="col l-2-4">
+                <div className="col l-2-4 m-5 c-1" />
+                <div className="col l-2-4 m-4 c-10">
                   <div className="Detail-sticky-price">
                     {currencyFormat(ProductLaptopDetail.price)} ₫
                   </div>
@@ -348,7 +348,7 @@ function DetailLaptop(props) {
                     {currencyFormat(ProductLaptopDetail.price)} ₫
                   </div>
                 </div>
-                <div className="col l-2-4">
+                <div className="col l-2-4 m-12 c-12">
                   <div className="Detail-sticky-add-cart">
                     <i className="fal fa-cart-plus position-right-option-icon">
                       
@@ -356,7 +356,7 @@ function DetailLaptop(props) {
                     <span>Thêm vào giỏ hàng</span>
                   </div>
                 </div>
-                <div className="col l-2-4 Detail-sticky-add-compare-container">
+                <div className="col l-2-4 m-6 c-6 Detail-sticky-add-compare-container">
                   <span className="Detail-sticky-add-compare">
                     <i className="far fa-plus Detail-sticky-add-compare-icon" />
                     <span>Thêm vào so sánh</span>

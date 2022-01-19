@@ -260,7 +260,7 @@ button.intput-comment-input {
 .Detail-sticky {
   width: 100%;
   height: 84px;
-  padding: 12px 0;
+  padding: 12px 6px;
   background-color: #ffffff;
   position: fixed;
   bottom: 0;
