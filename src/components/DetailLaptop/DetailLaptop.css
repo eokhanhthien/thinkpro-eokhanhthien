@@ -1,0 +1,381 @@
+/* .Size-logo{
+    height: 20px;
+    width: 72px;
+  
+}
+
+.Size-logo img{
+    width: 100%;
+} */
+
+/* .dis-padding{
+    padding-left: 34px;
+} */
+.Detail-container{
+  padding-top: 72px;
+}
+
+.Size-img-detail {
+  width: 500px;
+  height: 500px;
+}
+
+.size-img-title-swiper {
+  width: 100% !important;
+}
+
+.size-img-thumbnail-swiper {
+  width: 117.5px !important;
+}
+
+.Size-img-trademark {
+  width: 40px;
+  height: 26px;
+}
+.Size-img-trademark img {
+  width: 100%;
+}
+
+span.Detail-custom-text {
+  font-weight: 600;
+  font-size: 15px;
+  color: #424a4a;
+}
+
+div.Detail-custom-text {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+span.Detail-custom-text-content {
+  font-size: 15px;
+  color: #383838;
+  line-height: 22px;
+}
+
+div.Detail-custom-text-content {
+  font-size: 15px;
+  color: #383838;
+  line-height: 28px;
+}
+
+.row.Detail-trademark-container {
+  line-height: 26px;
+  margin: 8px 0 8px 0;
+}
+
+.Detail-insurance-boder {
+  border: 1px solid #e3e7ef;
+  padding: 18px 12px 18px 33px;
+  border-radius: 4px;
+}
+
+.size-big-text {
+  font-size: 18px !important;
+}
+
+.Detail-insurance-boder > ul > li {
+  line-height: 26px;
+}
+
+.Detail-insurance-boder a {
+  text-decoration: none;
+  color: #d74636;
+  line-height: 26px;
+}
+
+.Size-img-detail {
+  position: sticky;
+  top: 0px;
+  cursor: pointer;
+}
+
+
+
+.boder-sale {
+  border-top: 1px solid #e3e7ef;
+  border-bottom: 1px solid #e3e7ef;
+  padding: 20px 0;
+  margin: 10px 0;
+}
+
+.Detail-time-sale {
+  padding: 10px;
+  background-color: #d74636;
+  color: white;
+  font-weight: 700;
+  width: 86px;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+.Detail-custom-time-sale {
+  font-size: 14px;
+  color: #383838;
+}
+
+.strikethrough-text {
+  text-decoration: line-through;
+}
+
+.col.l-12.Detail-option-choose-boder {
+  border: 2px solid #06c1d4;
+  padding: 20px 20px 20px 20px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+
+span.Detail-color-backgroud-orange {
+  padding: 8px;
+  background-color: #ed6e33;
+  color: white;
+  font-size: 13px;
+  line-height: 40px;
+}
+
+.col.l-12.boder-bt {
+  border: 1px solid #cdf3f7;
+  margin: 10px 0;
+}
+
+.Detail-color-text-blue {
+  color: #276ff2;
+  font-size: 16px;
+}
+
+i.far.fa-bell.Detail-color-icon-blue {
+  margin: 0 10px 0px 10px;
+}
+
+.line-height-text-span {
+  line-height: 22px;
+}
+
+.col.l-12.boder-bt-9 {
+  border-bottom: 1px solid #d1d3d3;
+  margin: 80px 0 10px 0;
+}
+
+span.size-big-text-span {
+  font-size: 20px;
+}
+
+span.size-big-text-tag {
+  padding: 10px;
+  background-color: #f3f5f8;
+  border: 1px solid #f3f5f8;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #424a4a;
+}
+
+.Comment-cient {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.Comment-cient-write {
+  width: 80%;
+  background-color: #06c1d4;
+  text-align: center;
+  font-size: 19px;
+  color: white;
+  padding: 10px;
+  border-radius: 50px;
+  margin: 14px 0;
+  cursor: pointer;
+}
+
+span.Detail-number-comment {
+  font-size: 36px;
+}
+
+.Detail-star-commnet {
+  font-size: 24px;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+span.Detail-custom-text-content.center-text {
+  padding: 14px 0 0 10px;
+}
+
+textarea.intput-comment {
+  width: 100%;
+  height: 120px;
+}
+
+textarea.intput-comment {
+  width: 100%;
+  height: 120px;
+  outline: none;
+  border: 1px solid #f3f5f8;
+  margin-top: 20px;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 12px 0 0 12px;
+  background-color: #f3f5f8;
+  transition: 0.4s;
+
+  /* Khoa cung width */
+  resize: none;
+}
+
+textarea.intput-comment:hover {
+  border: 1px solid #06c1d4;
+}
+
+.Container-intput-comment {
+  position: relative;
+  padding: 0;
+}
+
+button.intput-comment-input {
+  padding: 10px 20px;
+  color: white;
+  background-color: #06c1d4;
+  border: 1px solid #06c1d4;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  position: absolute;
+  top: 60%;
+  right: 3%;
+  cursor: pointer;
+}
+
+.Detail-padding-content {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.col.l-9.Container-intput-comment {
+  padding: 0;
+}
+
+.Detail-sticky {
+  width: 100%;
+  height: 84px;
+  padding: 12px 0;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.Detail-sticky-hidden{
+  display: none !important;
+}
+
+
+.Detail-sticky-hotline {
+  font-size: 14px;
+  color: #171c27;
+  opacity: 0.5;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.Detail-sticky-hotline-number {
+  font-size: 24px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.Detail-sticky-price {
+  color: #d74636;
+  font-size: 24px;
+}
+
+.Detail-sticky-price-sale {
+  text-decoration: line-through;
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.Detail-sticky-add-cart {
+  background-color: #06c1d4;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+}
+.Detail-sticky-add-cart span {
+  margin-left: 6px;
+  font-size: 18px;
+}
+
+span.Detail-sticky-add-compare {
+  background-color: white;
+  border-radius: 50px;
+  border: 1px solid #d1d1d1;
+  padding: 12px;
+  font-size: 18px;
+  margin-top: 17px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.col.l-2-4.Detail-sticky-add-compare-container {
+  padding: 4px 0px 0 0;
+}
+
+.Detail-sticky-add-compare-icon {
+  max-width: 0 6px 0 0;
+  color: #06c1d4;
+}
+
+i.far.fa-heart.Detail-sticky-add-compare-icon-like {
+  font-size: 26px;
+  margin-left: 14px;
+  cursor: pointer;
+}
+
+.Custom-for-SetInnerHTML{
+  width: 100%;
+}
+
+.Custom-for-SetInnerHTML p{
+line-height: 30px;
+}
+.Custom-for-SetInnerHTML h3{
+  margin-top: 20px;
+  }
+.Custom-for-SetInnerHTML p img{
+  width: 100% !important;
+}
+.Custom-for-SetInnerHTML img{
+  width: 100% !important;
+}
+
+.Custom-for-SetInnerHTML-info-product-item ul{
+  list-style: none;
+}
+
+.Custom-for-SetInnerHTML-info-product-item ul li{
+  color: #383838;
+  line-height: 24px;
+}
+
+.Custom-size-img-color-detail{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #06C1D4;
+  margin: 0 4px 0 0;
+}
+
+.Custom-size-img-color-detail img{
+  width: 100%;
+}
+.Comment-client-numbers span{
+ color: #383838;
+ text-decoration: underline;
+ cursor: pointer;
+}

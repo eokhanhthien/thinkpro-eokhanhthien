@@ -1,0 +1,100 @@
+.PageAllLap-justify-content{
+    justify-content: end;
+}
+
+.PageAllLap-icon-list-option {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 2px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.PageAllLap-Custom-Color-text.filter-option{
+    cursor: pointer;
+}
+
+.PageAllLap-Custom-Color-text.filter-option.activeSortPrice{
+    cursor: pointer;
+    color: #06C1D5;
+}
+
+.PageAllLap-icon-list-option-active{
+     background-color: #F3F5F8;
+}
+
+.PageAllLap-Custom-Bold-text{
+    font-weight: bold;
+}
+
+.PageAllLap-Custom-Color-text {
+    color: #343434;
+    font-size: 15px;
+}
+
+.filter-option{
+    margin: 0 0 0 10px;
+}
+
+.PageAllLap-Filter-Container{
+    position: sticky;
+    top: 70px;
+}
+
+.PageAllLap-Filter {
+    height: 52px;
+    line-height: 52px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.PageAllLap-Filter-title{
+    border-bottom: 1px solid #d3d3cc;
+    color: #3b3b3b;
+}
+
+.Cutom-text-option-checkbox{
+    color: #343434;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 6px;
+}
+
+.Cutom-text-option-container {
+    height: 34px;
+}
+.PageAllLap-Filter-title i{
+    float: right;
+    line-height: 52px;
+}
+
+.Option-checkbox {
+    display: none;
+}
+
+.active_option_filter{
+    display: block;
+}
+
+.Option-checkbox-container{
+    overflow: auto;
+    height: 600px;
+}
+
+.Option-checkbox-container::-webkit-scrollbar { 
+    width: 0 !important;
+    display: none; 
+  }
+
+  .Content-2-container-product-col-12{
+    border: 1px solid rgb(240, 237, 237);
+    padding: 16px;
+    height: 240px;
+    width: 100%;
+  }
+
+  .Detail-sticky-price-sale {
+    text-decoration: line-through;
+    margin-top: 8px;
+    font-size: 16px;
+}

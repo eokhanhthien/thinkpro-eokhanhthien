@@ -1,0 +1,19 @@
+.Custom-center-pagination{
+    text-align: center;
+    margin-top: 50px;
+}
+button.Btn-Prev-Next-Pagination {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #c9c9c7;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+button.Btn-Prev-Next-Pagination.active-curentPage{
+    background-color: #06C1D4;
+}

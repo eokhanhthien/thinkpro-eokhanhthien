@@ -1,0 +1,63 @@
+/* BASIC Style */
+.skeleton{
+    background: #ddd;
+    margin: 8px 0;
+    border-radius:  4px;
+}
+
+.skeleton.text{
+    width: 100%;
+    height: 12px;
+}
+
+.skeleton.text-50{
+    width: 50%;
+    height: 12px;
+}
+
+.skeleton.text-70{
+    width: 70%;
+    height: 12px;
+}
+
+.skeleton.img-thumbnail{
+    width: 100%;
+    height: 100px;
+}
+
+.skeleton.img-full{
+    width: 100%;
+    height: 300px;
+}
+
+.skeleton.title{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.skeleton.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.skeleton.thumbnail-30{
+    width: 30px;
+    height: 30px;
+}
+
+.skeleton.thumbnail-50{
+    width: 50px;
+    height: 50px;
+}
+
+.skeleton.thumbnail-100{
+    width: 100px;
+    height: 100px;
+}
+
+.skeleton.thumbnail-200{
+    width: 200px;
+    height: 200px;
+}
