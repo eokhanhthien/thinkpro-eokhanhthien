@@ -106,8 +106,8 @@ console.log(FilterLaptop);
           </div>
           <div className="col l-2">   
             <div className="row no-gutters PageAllLap-justify-content">
-              <div onClick={()=>{ChangeList(true)}} className={isList==true ? "PageAllLap-icon-list-option PageAllLap-icon-list-option-active" : "PageAllLap-icon-list-option"}><i className="fas fa-list-ul" /></div>
-              <div onClick={()=>{ChangeList(false)}} className={isList==false ? "PageAllLap-icon-list-option PageAllLap-icon-list-option-active" : "PageAllLap-icon-list-option"}><i className="fas fa-th-large" /></div>     
+              <div onClick={()=>{ChangeList(true)}} className={isList===true ? "PageAllLap-icon-list-option PageAllLap-icon-list-option-active" : "PageAllLap-icon-list-option"}><i className="fas fa-list-ul" /></div>
+              <div onClick={()=>{ChangeList(false)}} className={isList===false ? "PageAllLap-icon-list-option PageAllLap-icon-list-option-active" : "PageAllLap-icon-list-option"}><i className="fas fa-th-large" /></div>     
             </div>
           </div>
         </div>
@@ -268,7 +268,7 @@ console.log(FilterLaptop);
             </div>
           </div>
           <div className="col l-10">
-         { isList == true &&  <div className="row ">
+         { isList === true &&  <div className="row ">
              
           {isLoading 
             ? FilterLaptop.map((item, index) => {
@@ -304,7 +304,7 @@ console.log(FilterLaptop);
             </div>
 }
 
-{ isList ==false &&  <div className="row ">
+{ isList ===false &&  <div className="row ">
              
             {isLoading
             ? FilterLaptop.map((item, index) => {
@@ -328,7 +328,7 @@ console.log(FilterLaptop);
               
     
 
-            <div className="col l-12">
+            <div className="col l-12 m-12 c-12">
             <Pagination
               pagination={pagination}
               onPageChange={handlePageChange}

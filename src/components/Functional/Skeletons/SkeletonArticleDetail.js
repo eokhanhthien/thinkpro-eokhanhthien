@@ -119,7 +119,6 @@ function SkeletonArticleDetail(props) {
   <div className="row">
     <div className="col l-12 c-12 m-12 mt-t-b-16">
       <span className="size-big-text-span"><SkeletonsElement type="text"></SkeletonsElement></span>
-      <span className="size-big-text-tag"><SkeletonsElement type="text"></SkeletonsElement></span>
     </div>
     <div className="col l-6 m-6 c-6"><div className="Comment-cient"><SkeletonsElement type="text"></SkeletonsElement></div></div>
     <div className="col l-12 c-12 m-12">

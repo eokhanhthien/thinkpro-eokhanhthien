@@ -364,7 +364,7 @@ function PageAllLaptop(props) {
                 return <SkeletonArticle key={index}></SkeletonArticle>;
               })}
               
-            <div className="col l-12">
+            <div className="col l-12 m-12 c-12">
             <Pagination
               pagination={pagination}
               onPageChange={handlePageChange}

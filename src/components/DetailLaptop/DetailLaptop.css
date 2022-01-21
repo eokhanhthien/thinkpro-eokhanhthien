@@ -162,7 +162,7 @@ span.size-big-text-span {
 }
 
 span.size-big-text-tag {
-  padding: 10px;
+  padding: 6px;
   background-color: #f3f5f8;
   border: 1px solid #f3f5f8;
   border-radius: 4px;
@@ -260,7 +260,7 @@ button.intput-comment-input {
 .Detail-sticky {
   width: 100%;
   height: 84px;
-  padding: 12px 6px;
+  padding: 4px 6px;
   background-color: #ffffff;
   position: fixed;
   bottom: 0;
@@ -314,15 +314,15 @@ button.intput-comment-input {
   font-size: 18px;
 }
 
-span.Detail-sticky-add-compare {
+.Detail-sticky-add-compare {
   background-color: white;
   border-radius: 50px;
   border: 1px solid #d1d1d1;
-  padding: 12px;
+  padding: 10px;
   font-size: 18px;
-  margin-top: 17px;
   cursor: pointer;
   opacity: 0.8;
+  width: 84%;
 }
 .col.l-2-4.Detail-sticky-add-compare-container {
   padding: 4px 0px 0 0;
