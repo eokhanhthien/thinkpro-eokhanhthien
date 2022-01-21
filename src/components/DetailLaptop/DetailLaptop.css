@@ -307,7 +307,8 @@ button.intput-comment-input {
   border-radius: 50px;
   color: white;
   cursor: pointer;
-}
+  margin: 10px 0 0 0;
+} 
 .Detail-sticky-add-cart span {
   margin-left: 6px;
   font-size: 18px;

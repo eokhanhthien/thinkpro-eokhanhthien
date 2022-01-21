@@ -25,7 +25,6 @@ function DetailLaptop(props) {
         };
     })();
 
-
     // document.body.scrollTop = 0
     // window.scrollTo(0, 0)
 
@@ -35,11 +34,13 @@ function DetailLaptop(props) {
       // console.log(window.scrollY);
       //----------------------Sự kiện cho thanh add_cart END ----------------------
       // console.log(window.innerHeight);
- 
+      
     });
 
     
   }, [ProductLaptopDetail]);
+  
+ 
 
   // console.log(ProductLaptopDetail.thumbnail);
 

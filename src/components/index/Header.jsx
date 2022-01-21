@@ -115,7 +115,7 @@ function Header(props) {
           <div className="Header-search-focus">
 
           {
-            isLoading && 
+            FilterLaptop.length>0 ? 
             FilterLaptop.map((item,index) =>{
               return ( <SearchItem
               key={index}
@@ -125,8 +125,12 @@ function Header(props) {
               cur_sku={item.cur_sku}
               shared_url={item.shared_url}
               ></SearchItem>)
-            })
-           
+            }) 
+            :
+            <>
+            <img className="img-not-found-product" src="../../image/Product-Not-Found.png" alt="" />
+            <div>Không tìm thấy sản phẩm thích hợp !</div>
+            </>
           }
             
            

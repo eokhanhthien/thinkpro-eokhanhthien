@@ -38,6 +38,7 @@ function Home(props) {
   const [ProductLaptopMore, SetProductLaptopMore] = useState([]);
   const [ProductPC, SetProductPC] = useState([]);
   const [ProductAccessory, SetProductAccessory] = useState([]);
+  const [ProductMouse, SetProductProductMouse] = useState([]);
 
   useEffect(() => {
     (async function () {
@@ -65,12 +66,18 @@ function Home(props) {
         _limit: 5,
       });
 
+      let dbMouse = await postApi.getAll("/filters", {
+        category_id: 8,
+        _start: 10,
+        _limit: 10,
+      });
+
       SetProductLaptop(dbLaptop);
       SetProductLaptopMore(dbLaptopmore);
       SetProductPC(dbPC);
       SetProductAccessory(dbAccessory);
-
-      if (dbLaptop && dbLaptopmore && dbPC && dbAccessory) {
+      SetProductProductMouse(dbMouse)
+      if (dbLaptop && dbLaptopmore && dbPC && dbAccessory&&dbMouse) {
         SetisLoading(true);
       }
     })();
@@ -303,22 +310,23 @@ function Home(props) {
         </div>
         <div className="row Content-2-container">
           <div className="col l-12 m-12 c-12 Content-2-container-reduce-price">
-            <h1>Hàng đang về</h1>
+            <h1>Chuột</h1>
           </div>
 
           {isLoading
-            ? ProductLaptop.map((item, index) => {
+            ? ProductMouse.map((item, index) => {
                 return (
-                  <ProductItem
-                    id={item.id}
-                    key={index}
-                    name={item.name}
-                    thumbnail={item.thumbnail}
-                    cur_price={item.cur_price}
-                    tang_type={item.tang_type}
-                    shared_url={item.shared_url}
-                    cur_sku={item.cur_sku}
-                  ></ProductItem>
+                  <ProductItemColor
+                  id={item.id}
+                  key={index}
+                  name={item.name}
+                  thumbnail={item.thumbnail}
+                  cur_price={item.cur_price}
+                  tang_type={item.tang_type}
+                  cur_sku={item.cur_sku}
+                  shared_url={item.shared_url}
+                  options={item.options}
+                  ></ProductItemColor>
                 );
               })
             : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => {
@@ -326,7 +334,7 @@ function Home(props) {
               })}
 
           <div className="col l-12 m-12 c-12 Content-2-container-view-all">
-            <button className="add-view-all">Xem tất cả</button>
+          <NavLink to="/PageAllLaptop">  <button className="add-view-all">Xem tất cả</button></NavLink>
           </div>
         </div>
         <div className="row Content-2-container">
@@ -438,7 +446,7 @@ function Home(props) {
               })}
 
           <div className="col l-12 m-12 c-12 Content-2-container-view-all">
-            <button className="add-view-all">Xem tất cả</button>
+          <NavLink to="/PageAllLaptop"> <button className="add-view-all">Xem tất cả</button></NavLink>
           </div>
         </div>
         <div className="row Content-2-container">
@@ -467,7 +475,7 @@ function Home(props) {
               })}
 
           <div className="col l-12 m-12 c-12 Content-2-container-view-all">
-            <button className="add-view-all">Xem tất cả</button>
+          <NavLink to="/PageAllAccessory"> <button className="add-view-all">Xem tất cả</button></NavLink>
           </div>
         </div>
       </div>

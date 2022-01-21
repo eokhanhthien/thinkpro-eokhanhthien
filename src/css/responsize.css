@@ -794,7 +794,7 @@
     display: none !important;
   }
   .fixed-height-swiper .swiper-container.swiper-container-initialized.swiper-container-horizontal.mySwiper2 {
-    height: 210px !important;
+    height: 144px !important;
 }
 .khoanggia,
 .logo-thuonghieu-text {
@@ -853,6 +853,7 @@
 .Detail-sticky-add-compare-container{
   display: none !important;
 }
+
 }
 /*Tablet nhỏ(480 x 640)*/
 @media screen and (max-width: 480px){
@@ -862,6 +863,14 @@
   .Detail-sticky-add-compare span{
     font-size: 12px!important;
     padding: 10px !important;
+  }
+  .Content-left-text{
+    padding:4px 0 0 0 !important;
+  }
+  .Content-2-container-product-item:hover {
+    box-shadow: none !important;
+    cursor: none !important;
+    transition: none !important;
   }
 }
 /*Iphone(480 x 640)*/

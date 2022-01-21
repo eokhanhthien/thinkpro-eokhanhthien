@@ -3,6 +3,7 @@ import './Cart.css'
 
 function Cart(props) {
     return (
+<div className="Cart_container">
 <div className="grid wide">
   <div className="row mt-50">
     <div className="col l-1 dis-padding">
@@ -50,7 +51,7 @@ function Cart(props) {
     </div>
   </div>
 </div>
-
+</div>
     );
 }
 

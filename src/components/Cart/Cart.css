@@ -73,3 +73,7 @@ button.Add-cart-btn-order {
   color: #d53b2a;
   font-weight: 600;
 }
+
+.Cart_container{
+  margin-top: 72px;
+}

@@ -119,150 +119,55 @@ console.log(FilterLaptop);
                 <div className="PageAllLap-Filter">
                   <div className="PageAllLap-Filter-title">Thương hiệu <i className="fas fa-plus" /> </div>
                   <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Lenovo</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Razer</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Dell</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Asus</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">HP</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Keychron</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Filco</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">E-Dra</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Logitech</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">DAREU</span> </div>
                     <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Microsoft</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Akko</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Newmen</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Keydous</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Mistel</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Asus</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">FL-ESPORT</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Leopold</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Apple</span> </div>
                   </div>
-                  <div className="PageAllLap-Filter-title">Khoảng giá <i className="fas fa-plus" /> </div>
+                  <div className="PageAllLap-Filter-title">Kết nối <i className="fas fa-plus" /> </div>
                   <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Trên 50 triệu</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">40 - 50 triệu</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">30 - 40 triệu</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">20 - 30 triệu</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">15 - 20 triệu</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">10 - 15 triệu</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Dưới 10 triệu</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Có dây</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Không dây</span> </div>
                   </div>
-                  <div className="PageAllLap-Filter-title">Loại hàng <i className="fas fa-plus" /> </div>
+                  <div className="PageAllLap-Filter-title">Kết nối qua <i className="fas fa-plus" /> </div>
                   <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Chính hãng</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Nhập khẩu</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Dây</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">USB Receiver</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Bluetooth</span> </div>
                   </div>
-                  <div className="PageAllLap-Filter-title">Tình trạng <i className="fas fa-plus" /> </div>
+                  <div className="PageAllLap-Filter-title">Đèn LED <i className="fas fa-plus" /> </div>
                   <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">New Sealed</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">New, Fullbox</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">New, Outlet </span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Used</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">RGB</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Đơn sắc</span> </div>
                   </div>
-                  <div className="PageAllLap-Filter-title">CPU <i className="fas fa-plus" /> </div>
+                  <div className="PageAllLap-Filter-title">Layout <i className="fas fa-plus" /> </div>
                   <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Intel Dual Core</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Intel Core i3</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Intel Core i5 </span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Intel Core i7</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Intel Core i9</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Intel Xeon</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">AMD Ryzen 3</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">AMD Ryzen 5</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">AMD Ryzen 7</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Fullsize</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Tenkeyless</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">75% </span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">60%</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Khác</span> </div>
                   </div>
-                  <div className="PageAllLap-Filter-title">RAM <i className="fas fa-plus" /> </div>
+                  <div className="PageAllLap-Filter-title">Loại switch <i className="fas fa-plus" /> </div>
                   <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">4 Gb</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">8 Gb</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">16 Gb</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">20 Gb</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">32 Gb</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">64 Gb</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">128 Gb</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Red</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Black</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Brown</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Blue</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Speed</span> </div>
+                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Khác</span> </div>
                   </div>
-                  <div className="PageAllLap-Filter-title">Ổ cứng <i className="fas fa-plus" /> </div>
-                  <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">SSD</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">HDD</span> </div>
-                  </div>
-                  <div className="PageAllLap-Filter-title">Số ổ cứng hỗ trợ<i className="fas fa-plus" /> </div>
-                  <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">1</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">2</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">3</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">4</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">5</span> </div>
-                  </div>
-                  <div className="PageAllLap-Filter-title">Kích thước màn hình<i className="fas fa-plus" /> </div>
-                  <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">&lt; 13"</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">13 - 13.9"</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">14 - 14.9"</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">15 - 15.9"</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">16 - 17"</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">&gt; 17"</span> </div>
-                  </div>
-                  <div className="PageAllLap-Filter-title">Tỉ lệ màn hình<i className="fas fa-plus" /> </div>
-                  <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">16:9</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">16:10</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">3:2</span> </div> 
-                  </div>
-                  <div className="PageAllLap-Filter-title">Loại màn hình<i className="fas fa-plus" /> </div>
-                  <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Nhám</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Gương</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Cảm ứng</span> </div> 
-                  </div>
-                  <div className="PageAllLap-Filter-title">Dải màu hiển thị<i className="fas fa-plus" /> </div>
-                  <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Trên 90% sRGB</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">70 - 90% sRGB</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Dưới 70% sRGB</span> </div> 
-                  </div>
-                  <div className="PageAllLap-Filter-title">Tấm nền màn hình<i className="fas fa-plus" /> </div>
-                  <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">IPS</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">TN</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">OLED</span> </div> 
-                  </div>
-                  <div className="PageAllLap-Filter-title">Tần số quét<i className="fas fa-plus" /> </div>
-                  <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">60 Hz</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">75 Hz</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">120 Hz</span> </div> 
-                  </div>
-                  <div className="PageAllLap-Filter-title">Độ phân giải<i className="fas fa-plus" /> </div>
-                  <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">1366 x 768 (HD)</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">1600 x 900 (HD+)</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">1920 x 1080 (FHD)</span> </div> 
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">1920 x 1200 (FHD+)</span> </div> 
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">2560 x 1440 (2K)</span> </div> 
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">3840 x 2160 (4K)</span> </div> 
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">3840 x 2400 (4K+)</span> </div> 
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">3072 x 1920 (3K)</span> </div> 
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">3000 x 2000 (3K)</span> </div> 
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">2256 x 1504 (2K)</span> </div> 
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">2560 x 1600 (2K)</span> </div> 
-                  </div>
-                  <div className="PageAllLap-Filter-title">Card đồ họa<i className="fas fa-plus" /> </div>
-                  <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Intel HD</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Intel Iris</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Nvidia Geforce</span> </div> 
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Nvidia Quadro</span> </div> 
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">AMD Radeon</span> </div> 
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">AMD FirePro</span> </div> 
-                  </div>
-                  <div className="PageAllLap-Filter-title">Bộ nhớ đồ họa<i className="fas fa-plus" /> </div>
-                  <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">2 Gb</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">3 Gb</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">4 Gb</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">6 Gb</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">8 Gb</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">16 Gb</span> </div>
-                  </div>
-                  <div className="PageAllLap-Filter-title">Trọng lượng<i className="fas fa-plus" /> </div>
-                  <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Dưới 1kg</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">1 - 1.5kg</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">1.5 - 2kg</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">2 - 2.5kg</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">2.5 - 3.5kg</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Trên 3.5kg</span> </div>
-                  </div>
+                  
                 </div>
               </div> 
             </div>
