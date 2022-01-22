@@ -259,8 +259,8 @@ button.intput-comment-input {
 
 .Detail-sticky {
   width: 100%;
-  height: 84px;
-  padding: 4px 6px;
+  /* height: 84px; */
+  padding: 10px 6px;
   background-color: #ffffff;
   position: fixed;
   bottom: 0;
@@ -302,7 +302,7 @@ button.intput-comment-input {
 
 .Detail-sticky-add-cart {
   background-color: #06c1d4;
-  padding: 10px;
+  padding: 8px 4px;
   text-align: center;
   border-radius: 50px;
   color: white;
@@ -324,10 +324,10 @@ button.intput-comment-input {
   opacity: 0.8;
   width: 84%;
 }
-.col.l-2-4.Detail-sticky-add-compare-container {
-  padding: 4px 0px 0 0;
-}
 
+.col.l-4.m-12.c-12.Detail-sticky-add-compare-container {
+  margin: 10px 0 0 0;
+}
 .Detail-sticky-add-compare-icon {
   max-width: 0 6px 0 0;
   color: #06c1d4;

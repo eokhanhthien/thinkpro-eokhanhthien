@@ -357,7 +357,7 @@ function DetailLaptop(props) {
                     <span>Thêm vào giỏ hàng</span>
                   </div>
                 </div>
-                <div className="col l-2-4 m-12 c-12 Detail-sticky-add-compare-container">
+                <div className="col l-4 m-12 c-12 Detail-sticky-add-compare-container">
                   <button className="Detail-sticky-add-compare">
                     <i className="far fa-plus Detail-sticky-add-compare-icon" />
                     <span>Thêm vào so sánh</span>

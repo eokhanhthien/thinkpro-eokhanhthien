@@ -776,9 +776,7 @@
   .Detail-padding-content{
     width: 100% !important; 
   }
-  .Detail-sticky{
-    height: 160px!important;
-  }
+
 }
 /*Ipad dọc(768 x 1024)*/
 @media screen and (max-width: 768px){
@@ -874,7 +872,9 @@
   .Content-2-container-product-item-price {
     font-size: 18px !important;
   }
-
+  .Detail-sticky-add-compare{
+    padding: 7px !important;
+  }
 }
 /*Iphone(480 x 640)*/
 @media screen and (max-width: 320px){
