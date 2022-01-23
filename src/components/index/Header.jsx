@@ -9,6 +9,8 @@ import {
 import queryString from "query-string"
 import postApi from '../../api/postApi';
 import SearchItem from "../SearchItem/SearchItem";
+import { connect } from "react-redux";
+import { currencyFormat } from "../Functional/FormatNumber";
 
 function Header(props) {
   const [ScrollDown, setScrollDown] = useState(false);
@@ -84,6 +86,27 @@ function Header(props) {
   },300)
   }
 
+  function showSumProduct(cart) {
+    var sumProduct=0;
+    if(cart.length>0){
+      for(var i=0;i< cart.length;i++){
+        sumProduct+= cart[i].quantity;
+      }
+    }
+    return sumProduct; 
+}
+
+function showSumMoney(cart) {
+  var sum=0;
+  if(cart.length>0){
+    for(var i=0;i< cart.length;i++){
+      sum+=cart[i].product.price * cart[i].quantity;
+    }
+  }
+  return sum; 
+}
+
+
   return (
     <div className={ScrollDown ? "Header Header-down" : "Header Header-up"}>
       <div className="Container grid wide">
@@ -150,30 +173,42 @@ function Header(props) {
               <NavLink to="/Cart" className="icon-header-option-add-cart">
                 <i className="fal fa-cart-plus position-right-option-icon" />
                 <div className="Cart-hover-list">
-                  <span className="Number-products">1 sản phẩm </span>
+                  <span className="Number-products">{showSumProduct(props.Cart)} sản phẩm </span>
                   <span>trong giỏ hàng</span>
-                  <div className="row">
-                    <div className="col l-3">
-                      {" "}
+                  
+                <div className="Setheight_Header_product-cart">
+                  {
+                    props.Cart.map((item,index)=>{
+                      return (
+                      <div className="row Header_product-cart">
+                        <div className="col l-3">
                       <div className="Cart-hover-list-size-img">
-                        <img src="./image/pc1.jpg" alt="" />{" "}
+                        <img src={`https://lumen.thinkpro.vn/${item.product.thumbnail}`} alt="" />{" "}
                       </div>
                     </div>
                     <div className="col l-9">
                       <div className="Cart-number-products-name">
-                        Dell XPS 15 9510
+                        {item.product.name}
                       </div>
                       <div className="Cart-number-products-name-price">
                         53.990.000 ₫ x 1
                       </div>
                     </div>
-                    <div className="col l-12">
-                      {" "}
-                      <button className="Cart-btn-add-products">
-                        Giỏ hàng: 53.990.000 ₫
+                    </div>
+                      )
+                    })
+                  }
+                  </div>
+                  <div className="row">
+                     <div className="col l-12">
+                     <NavLink to="/Cart"> 
+                       <button className="Cart-btn-add-products">
+                        Giỏ hàng: {currencyFormat(showSumMoney(props.Cart))} ₫
                       </button>
+                      </NavLink>
                     </div>
                   </div>
+                  
                 </div>
               </NavLink>
 
@@ -191,4 +226,13 @@ function Header(props) {
   );
 }
 
-export default Header;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    Cart: state.Cart
+  }
+}
+
+export default connect(mapStateToProps, null, null)(Header)
+
+
+

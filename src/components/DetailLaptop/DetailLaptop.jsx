@@ -7,6 +7,9 @@ import productApi from "../../api/productApi";
 import SkeletonArticleDetail from "../Functional/Skeletons/SkeletonArticleDetail";
 import SwiperThumbnailProductDetail from "../Functional/Swiper/SwiperThumbnailProductDetail";
 
+import { actAddToCart } from "../../redux/actions/index"
+import { connect } from "react-redux";
+
 function DetailLaptop(props) {
   const { id, option } = useParams();
   const [ProductLaptopDetail, SetProductLaptopDetail] = useState(); //lưu ý ([])
@@ -40,6 +43,9 @@ function DetailLaptop(props) {
     
   }, [ProductLaptopDetail]);
   
+  function onAddToCart(item) {
+      props.onAddToCart(item);
+  }
  
 
   // console.log(ProductLaptopDetail.thumbnail);
@@ -351,10 +357,8 @@ function DetailLaptop(props) {
                 </div>
                 <div className="col l-2-4 m-12 c-12">
                   <div className="Detail-sticky-add-cart">
-                    <i className="fal fa-cart-plus position-right-option-icon">
-                      
-                    </i>
-                    <span>Thêm vào giỏ hàng</span>
+                    <i className="fal fa-cart-plus position-right-option-icon"> </i>
+                    <span onClick={() => onAddToCart(ProductLaptopDetail)}>Thêm vào giỏ hàng</span>
                   </div>
                 </div>
                 <div className="col l-4 m-12 c-12 Detail-sticky-add-compare-container">
@@ -377,4 +381,20 @@ function DetailLaptop(props) {
   );
 }
 
-export default DetailLaptop;
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    Cart: state.Cart
+  }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    onAddToCart: (item) => {
+      dispatch(actAddToCart(item,1))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps, null)(DetailLaptop)
+

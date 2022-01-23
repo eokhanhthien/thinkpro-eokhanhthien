@@ -166,6 +166,7 @@ function PageAllLaptop(props) {
                     <div className="Cutom-text-option-container"><input value="Asus"  type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Asus</span> </div>
                     <div className="Cutom-text-option-container"><input value="HP"  type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">HP</span> </div>
                     <div className="Cutom-text-option-container"><input value="Microsoft" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Microsoft</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Apple" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Apple</span> </div>
                   </div>
                   <div className="PageAllLap-Filter-title">Khoảng giá <i className="fas fa-plus" /> </div>
                   <div className="Option-checkbox">

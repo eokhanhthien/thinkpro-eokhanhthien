@@ -1,0 +1,18 @@
+export const ADD_TO_CART = "ADD_TO_CART";
+export const DELETE_PRODUCT_IN_CART = "DELETE_PRODUCT_IN_CART";
+export const UPDATE_PRODUCT_IN_CART = "UPDATE_PRODUCT_IN_CART";
+export const ADD_TO_DETAIL = "ADD_TO_DETAIL";
+export const GET_DB_LAPTOP = "GET_DB_LAPTOP";
+
+
+export const GET_FAVORITE_PRODUCT = "GET_FAVORITE_PRODUCT";
+export const DELETE_FAVORITE_PRODUCT = "DELETE_FAVORITE_PRODUCT";
+
+export const SHOW_MODAL_FAVORITE = "SHOW_MODAL_FAVORITE";
+
+export const GET_ACC_FACEBOOK = "GET_ACC_FACEBOOK";
+
+
+
+//Bước 1: Tạo ActionType
+//Bước 2: Tạo action 

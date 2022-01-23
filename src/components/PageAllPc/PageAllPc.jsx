@@ -11,23 +11,30 @@ import Pagination from '../Functional/Pagination/Pagination';
 import queryString from "query-string"
 import ProductItemColorAllLaptopCol12 from '../ProductItemColorAllLaptop/ProductItemColorAllLaptopCol12';
 
-function PageAllPc(props) {
+function PageAllLaptop(props) {
     const [isLoading, SetisLoading] = useState(false);
     const [FilterLaptop, SetFilterLaptop] = useState([]);
     const [totalLaptop, SettotalLaptop] = useState([]);
 
     const [isList, SetIsList] = useState(false);
+    const [isDESC, SetisDESC] = useState('');
 
     // Pagination --- BEGIN----------------------------------
     const [pagination, setPagination] = useState({
       _page : 1,
       _limit : 32,
-      _totalRows : 15
+      _totalRows : 32
     });
 
     const [filters , setFilters]  = useState({
       _limit:32,
       _page : 1,
+      name_like:'',
+      // cur_price_gte:'',
+      // cur_price_lte:6000000,
+
+      _sort:'',
+      _order:''
     })
     // Pagination --- END------------------------------------
 
@@ -38,12 +45,13 @@ function PageAllPc(props) {
         (async function () {
           // _limit=10&_page=1
             const paramsString = queryString.stringify(filters)
-            console.log(paramsString);
+            // console.log(paramsString);
             let dbLaptop = await postApi.getAll(`/filters?${paramsString}`, {
               category_id: 3,
             //   _start: 10,
             //   _limit: 10,
             })
+      
             SetFilterLaptop(dbLaptop)
               if (dbLaptop) {
                 SetisLoading(true);
@@ -56,11 +64,28 @@ function PageAllPc(props) {
     var optionFilter_item =  document.querySelectorAll(".Option-checkbox")
     for(let i=0;i<optionFilter.length;i++){
     optionFilter[i].onclick  = () => {
-        console.log(optionFilter_item[i])
+        // console.log(optionFilter_item[i])
         optionFilter_item[i].classList.toggle("active_option_filter")
     }
 }
+
+  var checkbox_option_item=document.querySelectorAll(".checkbox_option_item")
+  for(let j=0;j<checkbox_option_item.length;j++){
+    checkbox_option_item[j].onclick  = () => {
+      for(let n=0;n<checkbox_option_item.length;n++){
+        checkbox_option_item[n].checked = false
+    }
+
+    checkbox_option_item[j].checked = true
+    setFilters({
+      ...filters,
+      _page:1,
+      name_like: checkbox_option_item[j].value
+    })
+}}
+
 },[filters]);
+
 
     function handlePageChange(newPage) {
         // setFilters dùng để truyền vào params và giữ nguyên fillter khi phân trang
@@ -79,8 +104,24 @@ function PageAllPc(props) {
     const ChangeList  = (value) => {
       SetIsList(value)    
     }
+
+    function handleSortPrice(name_sort,option) {
+      setFilters({
+        ...filters,
+        _page:1,
+        _sort:name_sort,
+        _order:option
+      })
+      if(option === "desc"){
+        SetisDESC(true)
+      }
+      else{
+        SetisDESC(false)
+      }
+    }
+
     
-console.log(FilterLaptop);
+// console.log(FilterLaptop.length);
     return (
         <div className="Detail-container grid wide">
         <div className="row mt-50">
@@ -89,7 +130,7 @@ console.log(FilterLaptop);
               <img src="../../image/logosmall.svg" alt="" /> 
             </div>
           </div>
-          <div className="col l-1"><span>/ Laptop</span></div>
+          <div className="col l-1"><span>/ PC</span></div>
           <div className="col l-12 Content-2-container-reduce-price"><h1>Máy tính xách tay</h1></div>
         </div>
         <div className="row PageAllLap-justify-content">
@@ -100,8 +141,8 @@ console.log(FilterLaptop);
           <div className="col l-8">
             <div>
               <span className="PageAllLap-Custom-Bold-text">Sắp xếp theo:</span>
-              <span className="PageAllLap-Custom-Color-text filter-option">Giá tăng dần</span>
-              <span className="PageAllLap-Custom-Color-text filter-option">Giá giảm dần</span>
+              <span onClick={()=>{handleSortPrice("cur_price","asc")}} className={isDESC===true?"PageAllLap-Custom-Color-text filter-option":"PageAllLap-Custom-Color-text filter-option activeSortPrice"}>Giá tăng dần</span>
+              <span onClick={()=>{handleSortPrice("cur_price","desc")}} className={isDESC===true?"PageAllLap-Custom-Color-text filter-option activeSortPrice":"PageAllLap-Custom-Color-text filter-option "}>Giá giảm dần</span>
             </div>
           </div>
           <div className="col l-2">   
@@ -112,29 +153,29 @@ console.log(FilterLaptop);
           </div>
         </div>
         <div className="row mt-50">
-          <div className="col l-2 ">
+          <div className="col l-2 c-12 m-12">
             <div className="PageAllLap-Filter-Container">
               <div className="PageAllLap-Filter">Bộ lọc được áp dụng</div>
               <div className="Option-checkbox-container">
                 <div className="PageAllLap-Filter">
                   <div className="PageAllLap-Filter-title">Thương hiệu <i className="fas fa-plus" /> </div>
                   <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Lenovo</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Razer</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Dell</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Asus</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">HP</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Microsoft</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Lenovo" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Lenovo</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Razer" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Razer</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Dell" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Dell</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Asus"  type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Asus</span> </div>
+                    <div className="Cutom-text-option-container"><input value="HP"  type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">HP</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Microsoft" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Microsoft</span> </div>
                   </div>
                   <div className="PageAllLap-Filter-title">Khoảng giá <i className="fas fa-plus" /> </div>
                   <div className="Option-checkbox">
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Trên 50 triệu</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">40 - 50 triệu</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">30 - 40 triệu</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">20 - 30 triệu</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">15 - 20 triệu</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">10 - 15 triệu</span> </div>
-                    <div className="Cutom-text-option-container"><input type="checkbox" /><span className="Cutom-text-option-checkbox">Dưới 10 triệu</span> </div>
+                    <div className="Cutom-text-option-container"><input value="" data-valuetwo="50"type="checkbox" className='checkbox_option_item_price'/><span className="Cutom-text-option-checkbox">Trên 50 triệu</span> </div>
+                    <div className="Cutom-text-option-container"><input value="40" data-valuetwo="50"type="checkbox" className='checkbox_option_item_price'/><span className="Cutom-text-option-checkbox">40 - 50 triệu</span> </div>
+                    <div className="Cutom-text-option-container"><input value="30" data-valuetwo="40"type="checkbox" className='checkbox_option_item_price'/><span className="Cutom-text-option-checkbox">30 - 40 triệu</span> </div>
+                    <div className="Cutom-text-option-container"><input value="20" data-valuetwo="30"type="checkbox" className='checkbox_option_item_price'/><span className="Cutom-text-option-checkbox">20 - 30 triệu</span> </div>
+                    <div className="Cutom-text-option-container"><input value="15" data-valuetwo="20"type="checkbox" className='checkbox_option_item_price'/><span className="Cutom-text-option-checkbox">15 - 20 triệu</span> </div>
+                    <div className="Cutom-text-option-container"><input value="10" data-valuetwo="15"type="checkbox" className='checkbox_option_item_price'/><span className="Cutom-text-option-checkbox">10 - 15 triệu</span> </div>
+                    <div className="Cutom-text-option-container"><input value="10" data-valuetwo=""type="checkbox" className='checkbox_option_item_price'/><span className="Cutom-text-option-checkbox">Dưới 10 triệu</span> </div>
                   </div>
                   <div className="PageAllLap-Filter-title">Loại hàng <i className="fas fa-plus" /> </div>
                   <div className="Option-checkbox">
@@ -291,9 +332,6 @@ console.log(FilterLaptop);
                 return <SkeletonPageAllLapCol12 key={index}></SkeletonPageAllLapCol12>;
               })} 
           
-        
- 
-
             <div className="col l-12">
             <Pagination
               pagination={pagination}
@@ -326,18 +364,14 @@ console.log(FilterLaptop);
                 return <SkeletonArticle key={index}></SkeletonArticle>;
               })}
               
-    
-
             <div className="col l-12 m-12 c-12">
             <Pagination
               pagination={pagination}
               onPageChange={handlePageChange}
             ></Pagination>
-
             </div>
             </div>
 }
-
           </div>
         </div>
       </div>
@@ -345,4 +379,4 @@ console.log(FilterLaptop);
     );
 }
 
-export default PageAllPc;
+export default PageAllLaptop;

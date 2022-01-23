@@ -103,6 +103,7 @@ button.Cart-btn-add-products {
   border: 1px solid #06c1d4;
   border-radius: 50px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .Size-logo {
@@ -655,4 +656,19 @@ img.logo-thuonghieu:hover{
 
 .img-not-found-product{
   width: 100%;
+}
+
+.Header_product-cart{
+  border-bottom: 1px solid #f1eeee;
+  padding-top:8px;
+}
+
+.Setheight_Header_product-cart {
+  max-height: 300px;
+  overflow: auto;
+}
+
+.Setheight_Header_product-cart::-webkit-scrollbar { 
+  width: 0 !important;
+  display: none; 
 }
