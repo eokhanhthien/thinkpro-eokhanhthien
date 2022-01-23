@@ -672,3 +672,10 @@ img.logo-thuonghieu:hover{
   width: 0 !important;
   display: none; 
 }
+
+.position-left-img{
+  padding: 0 0 0 16px;
+}
+.position-left-img img{
+  width: 100%;
+}

@@ -355,10 +355,10 @@ function DetailLaptop(props) {
                     {currencyFormat(ProductLaptopDetail.price)} ₫
                   </div>
                 </div>
-                <div className="col l-2-4 m-12 c-12">
+                <div onClick={() => onAddToCart(ProductLaptopDetail)} className="col l-2-4 m-12 c-12">
                   <div className="Detail-sticky-add-cart">
                     <i className="fal fa-cart-plus position-right-option-icon"> </i>
-                    <span onClick={() => onAddToCart(ProductLaptopDetail)}>Thêm vào giỏ hàng</span>
+                    <span >Thêm vào giỏ hàng</span>
                   </div>
                 </div>
                 <div className="col l-4 m-12 c-12 Detail-sticky-add-compare-container">

@@ -10,19 +10,19 @@ function CartItem(props) {
 
     return (
         <div className="row no-gutters Add-cart-boder">
-        <div className="col l-3 "> 
+        <div className="col l-3 m-12 c-12"> 
           <div className="Add-cart-size-img">
             <img src={`https://lumen.thinkpro.vn/${props.thumbnail}`} alt="" />
           </div> 
         </div>
-        <div className="col l-7 ">
+        <div className="col l-7 m-12 c-12">
           <h3>{props.name}</h3>
           <div className="Add-cart-custom-text">SKU: {props.sku}</div>
           <div className="Add-cart-custom-text">x {props.quantity}</div>
           <div onClick={()=>onDeleteProduct(props.oneProduct)} className="Add-cart-custom-text">Xóa</div>
           <div className="Add-cart-custom-text Add-cart-custom-color">Khuyến mại <i className="far fa-angle-down" /></div>
         </div>
-        <div className="col l-2 ">
+        <div className="col l-2 m-12 c-12">
           <h3>{currencyFormat(props.price)} ₫</h3>
           <div className="Add-cart-custom-text-underline">{currencyFormat(props.price)} ₫</div>
         </div>

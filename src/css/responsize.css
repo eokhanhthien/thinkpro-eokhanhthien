@@ -780,7 +780,16 @@
 }
 /*Ipad dọc(768 x 1024)*/
 @media screen and (max-width: 768px){
-  .Header {
+
+  .icon-header-option,
+  .space-icon-header{
+    margin: 0 !important;
+  }
+  .space-icon-header{
+    padding: 10px 0 0 0 !important;
+  }
+  .Header-search-container,
+  .position-left-option{
     display: none;
   }
   .Detail-container,

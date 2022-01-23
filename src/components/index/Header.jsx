@@ -111,7 +111,7 @@ function showSumMoney(cart) {
     <div className={ScrollDown ? "Header Header-down" : "Header Header-up"}>
       <div className="Container grid wide">
         <div className="row">
-          <NavLink to="/" className="col l-2 mt-15 position-left-img">
+          <NavLink to="/" className="col l-2 m-4 c-4 mt-15 position-left-img">
             <img src="../../image/logo.svg" alt="" />
           </NavLink>
           <div className="col l-3 position-left-option">
@@ -165,7 +165,7 @@ function showSumMoney(cart) {
             </div>
 
           </div>
-          <div className="col l-3 position-right-option">
+          <div className="col l-3 m-8 c-8 position-right-option">
             <div className="row space-icon-header">
               <div className="icon-header-option">
                 <i className="far fa-bell position-right-option-icon" />
@@ -181,12 +181,12 @@ function showSumMoney(cart) {
                     props.Cart.map((item,index)=>{
                       return (
                       <div className="row Header_product-cart">
-                        <div className="col l-3">
+                        <div className="col l-3 m-3 c-3">
                       <div className="Cart-hover-list-size-img">
                         <img src={`https://lumen.thinkpro.vn/${item.product.thumbnail}`} alt="" />{" "}
                       </div>
                     </div>
-                    <div className="col l-9">
+                    <div className="col l-9 m-9 c-9">
                       <div className="Cart-number-products-name">
                         {item.product.name}
                       </div>
