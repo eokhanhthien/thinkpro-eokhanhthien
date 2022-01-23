@@ -2,7 +2,7 @@ import React from 'react';
 import { currencyFormat } from "../Functional/FormatNumber";
 
 function CartResult(props) {
-    console.log(props.TotalInCart);
+    // console.log(props.TotalInCart);
     
     function showSumMoney(cart) {
         var sum=0;

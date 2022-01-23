@@ -180,7 +180,7 @@ function showSumMoney(cart) {
                   {
                     props.Cart.map((item,index)=>{
                       return (
-                      <div className="row Header_product-cart">
+                      <div key={index} className="row Header_product-cart">
                         <div className="col l-3 m-3 c-3">
                       <div className="Cart-hover-list-size-img">
                         <img src={`https://lumen.thinkpro.vn/${item.product.thumbnail}`} alt="" />{" "}

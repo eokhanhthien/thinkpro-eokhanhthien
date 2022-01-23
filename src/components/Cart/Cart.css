@@ -9,7 +9,7 @@
 .Add-cart-custom-text {
   font-size: 14px;
   margin-top: 8px;
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 .Add-cart-custom-color {
@@ -76,4 +76,19 @@ button.Add-cart-btn-order {
 
 .Cart_container{
   margin-top: 72px;
+}
+.img-not-cart-empty img{
+  width: 100%;
+}
+.img-not-cart-empty{
+  width: 100%;
+  margin: 0 auto;
+}
+.Container-img-not-cart-empty{
+  width: 300px;
+  margin: 0 auto;
+}
+.text-not-cart-empty{
+  text-align: center;
+  margin: 14px 0px;
 }

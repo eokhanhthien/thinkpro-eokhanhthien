@@ -19,7 +19,7 @@ function CartItem(props) {
           <h3>{props.name}</h3>
           <div className="Add-cart-custom-text">SKU: {props.sku}</div>
           <div className="Add-cart-custom-text">x {props.quantity}</div>
-          <div onClick={()=>onDeleteProduct(props.oneProduct)} className="Add-cart-custom-text">Xóa</div>
+          <div  className="Add-cart-custom-text"><span onClick={()=>onDeleteProduct(props.oneProduct)}>Xóa</span> </div>
           <div className="Add-cart-custom-text Add-cart-custom-color">Khuyến mại <i className="far fa-angle-down" /></div>
         </div>
         <div className="col l-2 m-12 c-12">

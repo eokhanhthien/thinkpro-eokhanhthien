@@ -661,6 +661,7 @@ img.logo-thuonghieu:hover{
 .Header_product-cart{
   border-bottom: 1px solid #f1eeee;
   padding-top:8px;
+  width: 100%;
 }
 
 .Setheight_Header_product-cart {

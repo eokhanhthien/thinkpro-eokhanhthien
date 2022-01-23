@@ -25,12 +25,12 @@ function Cart(props) {
         <img src="./image/logosmall.svg" alt="" /> 
       </div>
     </div>
-    <div className="col l-1"><span>/ Laptop</span></div>
+    <div className="col l-1"><span>/ Cart</span></div>
   </div>
   <div className="col l-12 Content-2-container-reduce-price"><h1>Giỏ hàng ({showSumProduct(props.Cart)})</h1></div>
   <div className="row no-gutters">
     <div className="col l-9 m-12 c-12">
-    {
+    { props.Cart.length > 0 ?
       props.Cart.map((item, index) =>{
        return <CartItem
        key={index}
@@ -43,6 +43,11 @@ function Cart(props) {
        ></CartItem>
 
       })
+      :
+           <div className='Container-img-not-cart-empty'>
+            <img className="img-not-cart-empty" src="../../image/cart-empty.png" alt="" />
+            <div className="text-not-cart-empty">Không có sản phẩm trong giỏ hàng !</div>
+            </div>
     }  
     </div>
 
