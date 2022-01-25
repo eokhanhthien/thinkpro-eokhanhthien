@@ -5,7 +5,7 @@ import CartItem from './CartItem';
 import CartResult from "./CartResult"
 
 function Cart(props) {
-
+  window.scrollTo(0, 0)
   function showSumProduct(cart) {
     var sumProduct=0;
     if(cart.length>0){

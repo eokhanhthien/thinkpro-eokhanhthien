@@ -42,7 +42,11 @@ function DetailLaptop(props) {
 
     
   }, [ProductLaptopDetail]);
-  
+
+  useEffect (()=>{
+    window.scrollTo(0, 0)
+  },[])
+
   function onAddToCart(item) {
       props.onAddToCart(item);
   }

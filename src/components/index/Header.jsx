@@ -191,7 +191,7 @@ function showSumMoney(cart) {
                         {item.product.name}
                       </div>
                       <div className="Cart-number-products-name-price">
-                        53.990.000 ₫ x 1
+                        {currencyFormat(item.product.price)} ₫ x {item.quantity}
                       </div>
                     </div>
                     </div>

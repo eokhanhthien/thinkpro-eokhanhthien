@@ -39,7 +39,7 @@ function PageAllLaptop(props) {
 
 
 
-
+    window.scrollTo(0, 0)
     useEffect(() => {
         (async function () {
           // _limit=10&_page=1

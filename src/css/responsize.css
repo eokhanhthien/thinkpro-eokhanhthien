@@ -894,6 +894,9 @@
   .Content-container{
     margin-top: 72px !important;
   }
+  .icon-header-option-add-cart:hover .Cart-hover-list {
+    display: none;
+}
 }
 /*Iphone(480 x 640)*/
 @media screen and (max-width: 320px){

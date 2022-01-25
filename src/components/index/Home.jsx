@@ -446,7 +446,7 @@ function Home(props) {
               })}
 
           <div className="col l-12 m-12 c-12 Content-2-container-view-all">
-          <NavLink to="/PageAllLaptop"> <button className="add-view-all">Xem tất cả</button></NavLink>
+          <NavLink to="/PageAllPc"> <button className="add-view-all">Xem tất cả</button></NavLink>
           </div>
         </div>
         <div className="row Content-2-container">

@@ -32,7 +32,7 @@ function PageAllAccessory(props) {
 
 
 
-
+    window.scrollTo(0, 0)
     useEffect(() => {
         (async function () {
           // _limit=10&_page=1
@@ -79,7 +79,7 @@ function PageAllAccessory(props) {
       SetIsList(value)    
     }
     
-console.log(FilterLaptop);
+// console.log(FilterLaptop);
     return (
         <div className="Detail-container grid wide">
         <div className="row mt-50">
