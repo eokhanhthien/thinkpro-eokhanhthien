@@ -897,6 +897,9 @@
   .icon-header-option-add-cart:hover .Cart-hover-list {
     display: none;
 }
+.Content-2-container-reduce-price h1{
+  padding: 0 0 0 10px;
+}
 }
 /*Iphone(480 x 640)*/
 @media screen and (max-width: 320px){

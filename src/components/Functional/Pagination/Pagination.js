@@ -22,6 +22,20 @@ function Pagination(props) {
     const [curentPageActiveBtn, SetCurentPageActiveBtn] = useState(1);
     // 51/10 = 5.1 -> 6 page
 
+
+    // xử lý giới hạn nút trang - BEGIN
+    let leftSide = curentPageActiveBtn - 2;
+    let rightSide = curentPageActiveBtn + 2;
+    if(leftSide <= 0 ) leftSide=1;
+    if(rightSide>totalPages) rightSide = totalPages;
+    let items = [];
+    for (let number = leftSide ; number <= rightSide; number++) {
+        items.push(
+            <button  onClick={() => handlePageChange(number)} className={curentPageActiveBtn == number?"Btn-Prev-Next-Pagination active-curentPage" : "Btn-Prev-Next-Pagination"} >{number}</button>,
+        );
+      }
+    // xử lý giới hạn nút trang - ENĐ
+      
     useEffect(()=>{
         (async function () {
             var arr=[]
@@ -54,11 +68,16 @@ function Pagination(props) {
             >
                <i className ="fas fa-chevron-left"></i>
             </button>
-       {
+
+        {/* Đây là cách thường  */}
+       {/* {
            arrBtn.map((item,index) => {
                return (<button  onClick={() => handlePageChange(index+1)} className={curentPageActiveBtn == index+1?"Btn-Prev-Next-Pagination active-curentPage" : "Btn-Prev-Next-Pagination"} key = {index+1}>{index+1}</button>)
            })
-       }
+       } */}
+       
+       {/* items là mảng đã xử lý số nút */}
+       {items}
 
             <button className='Btn-Prev-Next-Pagination'
             disabled={_page >= totalPages}
