@@ -4,6 +4,13 @@ import { useState } from 'react';
 import postApi from '../../api/postApi';
 import SkeletonNews from '../Functional/Skeletons/SkeletonNews';
 import "./News.css"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
 
 function News(props) {
     const [News, setNews] = useState('');
@@ -38,12 +45,15 @@ function News(props) {
         {
             News ? News.map((item,index)=>{
                 return ( 
-                <div className="col l-4 m-6 c-12" key={index}>
-                <div className="News_item">
+                <div className="col l-4 m-6 c-12" 
+                key={index}
+                
+                >
+                 <NavLink to={`/PageNewsDetail/${item.id}`}> <div className="News_item">
                   <img src={`https://media-api-beta.thinkpro.vn/${item.thumbnail}`} alt="" />
                   <div className="News_item_time">{item.created_at}     </div>
                   <div className="News_item_title">{item.title} </div>
-                </div>
+                </div></NavLink>
               </div>)
             }) : (
               [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12].map((item, index) => {
