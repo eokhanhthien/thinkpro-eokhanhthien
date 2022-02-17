@@ -98,42 +98,46 @@ function Home(props) {
           <div className="col l-4 m-12 c-12 customheight-Content-right mt-50">
             <div className="row">
               <div className="col l-12 Content-right-item">
-                <div className="Content-right-item-boder active-right-item-boder">
+              <NavLink to="/PageNews"> <div className="Content-right-item-boder active-right-item-boder">
                   <a href="true">
                     Mừng Sinh Nhật Think - Linh Đình Quà Tặng”, Cơ Hội Trúng
                     Logo ThinkPro Bằng Vàng Cực Đã
-                  </a>
+                  </a> 
                 </div>
+              </NavLink>
               </div>
             </div>
             <div className="row">
-              <div className="col l-12 Content-right-item">
-                <div className="Content-right-item-boder">
+            <div className="col l-12 Content-right-item">
+                <NavLink to="/PageNews">  <div className="Content-right-item-boder">
                   <a href="true">
                     Noel Trẩy Hội - Quà Tặng Dữ Dội Tại ThinkPro Với Tổng Giá
                     Trị Lên Tới 100 Triệu Đồng
                   </a>
-                </div>
+                </div></NavLink>
               </div>
+            
             </div>
             <div className="row">
               <div className="col l-12 Content-right-item">
-                <div className="Content-right-item-boder">
+              <NavLink to="/PageNews"><div className="Content-right-item-boder">
                   <a href="true">
                     Chia Sẻ Cảm Nghĩ Về Think, Nhận Ngay Quà Tặng Linh Đình -
                     Minigame Siêu HOT “How I Met ThinkPro
                   </a>
-                </div>
+                </div></NavLink>
               </div>
+            
+
             </div>
             <div className="row">
               <div className="col l-12 Content-right-item">
-                <div className="Content-right-item-morenews">
+              <NavLink to="/PageNews"> <div className="Content-right-item-morenews">
                   <a href="true">
                     Tất cả tin tức{" "}
                     <i className="fas fa-chevron-right Content-right-item-morenews-icon" />
                   </a>
-                </div>
+                </div> </NavLink>
               </div>
             </div>
           </div>
