@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import postApi from '../../api/postApi';
+import SkeletonNews from '../Functional/Skeletons/SkeletonNews';
 import "./News.css"
 
 function News(props) {
@@ -35,14 +36,19 @@ function News(props) {
 
         {
             News ? News.map((item,index)=>{
-                return ( <div className="col l-4 m-6 c-12" key={index}>
+                return ( 
+                <div className="col l-4 m-6 c-12" key={index}>
                 <div className="News_item">
                   <img src={`https://lumen.thinkpro.vn/${item.thumbnail}`} alt="" />
                   <div className="News_item_time">{item.created_at}  |   {item.created_by.name}</div>
-                  <div className="News_item_title">Ngày hội Công nghệ Giáo dục 2021  Tương lai Giáo dục hậu Covid </div>
+                  <div className="News_item_title">{item.title} </div>
                 </div>
               </div>)
-            }) : null
+            }) : (
+              [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12].map((item, index) => {
+                return <SkeletonNews key={index}></SkeletonNews>;
+              })
+            )
         }
 
  {/* <div className="col l-4 m-6 c-12">

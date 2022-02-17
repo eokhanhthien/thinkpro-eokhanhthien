@@ -296,7 +296,9 @@ button.Cart-btn-add-products {
 .position-right-option-icon {
   font-size: 24px;
 }
-
+i.far.fa-bell.position-right-option-icon {
+  color: black;
+}
 .position-left-option {
   padding-right: 70px;
   text-align: start;
@@ -368,7 +370,7 @@ img.Content-img {
 }
 
 .Content-container {
-  padding-top: 24px;
+  padding-bottom: 60px !important;
   margin-top: 72px;
 }
 
@@ -577,8 +579,6 @@ img.logo-thuonghieu:hover{
 }
 
 .Footer {
-  margin-top: 60px;
-  /* height: 538px; */
   background-color: #05042c;
   padding: 40px 0 20px 0;
 }

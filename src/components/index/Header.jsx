@@ -167,11 +167,13 @@ function showSumMoney(cart) {
           </div>
           <div className="col l-3 m-8 c-8 position-right-option">
             <div className="row space-icon-header">
-              <div className="icon-header-option">
-                <i className="far fa-bell position-right-option-icon" />
-              </div>
-              <NavLink to="/Cart" className="icon-header-option-add-cart">
-                <i className="fal fa-cart-plus position-right-option-icon" />
+            <div className="icon-header-option">
+                <NavLink to="/PageNews"> <i className="far fa-bell position-right-option-icon" /> </NavLink>
+            </div>
+
+              
+              <NavLink to="/Cart" className="icon-header-option-add-cart ">
+                <i className="fal fa-cart-plus position-right-option-icon icon_news" />
                 <div className="Cart-hover-list">
                   <span className="Number-products">{showSumProduct(props.Cart)} sản phẩm </span>
                   <span>trong giỏ hàng</span>
