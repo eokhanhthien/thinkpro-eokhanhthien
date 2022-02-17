@@ -20,6 +20,7 @@ function News(props) {
     },[])
 
 
+    // console.log(News);
     return (
         <div className="Content-container News_container">
   <div className="grid wide">
@@ -39,8 +40,8 @@ function News(props) {
                 return ( 
                 <div className="col l-4 m-6 c-12" key={index}>
                 <div className="News_item">
-                  <img src={`https://lumen.thinkpro.vn/${item.thumbnail}`} alt="" />
-                  <div className="News_item_time">{item.created_at}  |   {item.created_by.name}</div>
+                  <img src={`https://media-api-beta.thinkpro.vn/${item.thumbnail}`} alt="" />
+                  <div className="News_item_time">{item.created_at}     </div>
                   <div className="News_item_title">{item.title} </div>
                 </div>
               </div>)

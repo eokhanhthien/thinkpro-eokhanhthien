@@ -130,7 +130,7 @@ function PageAllLaptop(props) {
             </div>
           </div>
           <div className="col l-1"><span>/ Mouse</span></div>
-          <div className="col l-12 Content-2-container-reduce-price"><h1>Máy tính xách tay</h1></div>
+          <div className="col l-12 Content-2-container-reduce-price"><h1>Chuột</h1></div>
         </div>
         <div className="row PageAllLap-justify-content">
           <div className="col l-2">
