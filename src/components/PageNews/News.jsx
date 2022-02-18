@@ -24,6 +24,7 @@ function News(props) {
         }
         
         )()
+        window.scrollTo(0, 0)
     },[])
 
 
@@ -46,14 +47,12 @@ function News(props) {
             News ? News.map((item,index)=>{
                 return ( 
                 <div className="col l-4 m-6 c-12" 
-                key={index}
-                
-                >
-                 <NavLink to={`/PageNewsDetail/${item.id}`}> <div className="News_item">
-                  <img src={`https://media-api-beta.thinkpro.vn/${item.thumbnail}`} alt="" />
+                key={index}>
+                 <div className="News_item">
+                 <NavLink to={`/PageNewsDetail/${item.id}`}><img src={`https://media-api-beta.thinkpro.vn/${item.thumbnail}`} alt="" /></NavLink>
                   <div className="News_item_time">{item.created_at}     </div>
-                  <div className="News_item_title">{item.title} </div>
-                </div></NavLink>
+                   <NavLink to={`/PageNewsDetail/${item.id}`}><div className="News_item_title">{item.title} </div></NavLink>
+                </div>
               </div>)
             }) : (
               [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12].map((item, index) => {
@@ -62,34 +61,7 @@ function News(props) {
             )
         }
 
- {/* <div className="col l-4 m-6 c-12">
-        <div className="News_item">
-          <img src="https://news.microsoft.com/wp-content/uploads/prod/sites/463/2021/12/Picture1-480x270.png" alt="" />
-          <div className="News_item_time">Dec 24, 2021  |   Microsoft Vietnam Communications</div>
-          <div className="News_item_title">Ngày hội Công nghệ Giáo dục 2021 – Tương lai Giáo dục hậu Covid </div>
-        </div>
-      </div>
-      <div className="col l-4 m-6 c-12">
-        <div className="News_item">
-          <img src="https://news.microsoft.com/wp-content/uploads/prod/sites/463/2021/12/Picture1-480x270.png" alt="" />
-          <div className="News_item_time">Dec 24, 2021  |   Microsoft Vietnam Communications</div>
-          <div className="News_item_title">Ngày hội Công nghệ Giáo dục 2021 – Tương lai Giáo dục hậu Covid </div>
-        </div>
-      </div>
-      <div className="col l-4 m-6 c-12">
-        <div className="News_item">
-          <img src="https://news.microsoft.com/wp-content/uploads/prod/sites/463/2021/12/Picture1-480x270.png" alt="" />
-          <div className="News_item_time">Dec 24, 2021  |   Microsoft Vietnam Communications</div>
-          <div className="News_item_title">Ngày hội Công nghệ Giáo dục 2021 – Tương lai Giáo dục hậu Covid </div>
-        </div>
-      </div>
-      <div className="col l-4 m-6 c-12">
-        <div className="News_item">
-          <img src="https://news.microsoft.com/wp-content/uploads/prod/sites/463/2021/12/Picture1-480x270.png" alt="" />
-          <div className="News_item_time">Dec 24, 2021  |   Microsoft Vietnam Communications</div>
-          <div className="News_item_title">Ngày hội Công nghệ Giáo dục 2021 – Tương lai Giáo dục hậu Covid </div>
-        </div>
-      </div> */}
+
 
 
     </div>

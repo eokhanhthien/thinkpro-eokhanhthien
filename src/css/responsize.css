@@ -776,7 +776,9 @@
   .Detail-padding-content{
     width: 100% !important; 
   }
-
+  .action-btn{
+    width: 100%;
+  }
 }
 /*Ipad dọc(768 x 1024)*/
 @media screen and (max-width: 768px){
@@ -851,17 +853,19 @@
 }
 
 .position-right-option-icon,
-.Detail-sticky-add-cart span{
-  font-size: 14px !important;
+.action-btn span{
+  font-size: 16px !important;
 }
-
+.action-btn{
+  width: 100%;
+}
 
 }
 /*Tablet nhỏ(480 x 640)*/
 @media screen and (max-width: 480px){
   .Footer,
-  .Detail-sticky-add-cart span{
-    font-size: 12px!important;
+  .action-btn span{
+    font-size: 16px!important;
   }
   .Detail-sticky-add-compare span{
     font-size: 12px!important;
@@ -899,6 +903,9 @@
 }
 .Content-2-container-reduce-price h1{
   padding: 0 0 0 10px;
+}
+.action-btn{
+  width: 100%;
 }
 }
 /*Iphone(480 x 640)*/

@@ -300,19 +300,7 @@ button.intput-comment-input {
   font-size: 16px;
 }
 
-.Detail-sticky-add-cart {
-  background-color: #06c1d4;
-  padding: 8px 4px;
-  text-align: center;
-  border-radius: 50px;
-  color: white;
-  cursor: pointer;
-  margin: 10px 0 0 0;
-} 
-.Detail-sticky-add-cart span {
-  margin-left: 6px;
-  font-size: 18px;
-}
+
 
 .Detail-sticky-add-compare {
   background-color: white;

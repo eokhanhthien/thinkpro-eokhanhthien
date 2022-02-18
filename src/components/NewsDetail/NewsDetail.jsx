@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import postApi from "../../api/postApi";
+import SkeletonNewsItem from '../Functional/Skeletons/SkeletonNewsItem';
 import "./NewsDetail.css"
 
 function NewsDetail(props) {
     const { id } = useParams();
     const [News, setNews] = useState('');
-    useEffect (()=>{
+    useEffect (()=>{  
         (async function () {
             let dbNews = await postApi.getAll("/posts", {
                 _start: 0,
@@ -17,6 +18,7 @@ function NewsDetail(props) {
         }
         
         )()
+        window.scrollTo(0, 0)
     },[])
     console.log(News);
     return (
@@ -35,7 +37,7 @@ function NewsDetail(props) {
               />
 
         </div>
-      </div> : null}
+      </div> : <SkeletonNewsItem></SkeletonNewsItem>}
 
       </div>
     );

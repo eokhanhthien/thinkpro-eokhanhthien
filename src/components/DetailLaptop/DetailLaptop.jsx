@@ -9,6 +9,7 @@ import SwiperThumbnailProductDetail from "../Functional/Swiper/SwiperThumbnailPr
 
 import { actAddToCart } from "../../redux/actions/index"
 import { connect } from "react-redux";
+import Btn_loading from "../Functional/ButtonLoading/Btn_loading";
 
 function DetailLaptop(props) {
   const { id, option } = useParams();
@@ -360,10 +361,12 @@ function DetailLaptop(props) {
                   </div>
                 </div>
                 <div onClick={() => onAddToCart(ProductLaptopDetail)} className="col l-2-4 m-12 c-12">
-                  <div className="Detail-sticky-add-cart">
+                  {/* <div className="Detail-sticky-add-cart">
                     <i className="fal fa-cart-plus position-right-option-icon"> </i>
-                    <span >Thêm vào giỏ hàng</span>
-                  </div>
+                    <span >Thêm vào giỏ hàng</span>    
+                  </div> */}
+                  
+                  <Btn_loading></Btn_loading>
                 </div>
                 <div className="col l-4 m-12 c-12 Detail-sticky-add-compare-container">
                   <button className="Detail-sticky-add-compare">

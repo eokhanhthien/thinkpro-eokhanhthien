@@ -167,9 +167,9 @@ function showSumMoney(cart) {
           </div>
           <div className="col l-3 m-8 c-8 position-right-option">
             <div className="row space-icon-header">
-            <div className="icon-header-option">
-                <NavLink to="/PageNews"> <i className="far fa-bell position-right-option-icon" /> </NavLink>
-            </div>
+            <NavLink to="/PageNews" className="icon-header-option">
+                <i className="far fa-bell position-right-option-icon" /> 
+            </NavLink>
 
               
               <NavLink to="/Cart" className="icon-header-option-add-cart ">
