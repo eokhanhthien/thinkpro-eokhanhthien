@@ -680,3 +680,6 @@ img.logo-thuonghieu:hover{
 .position-left-img img{
   width: 100%;
 }
+i.fal.fa-cart-plus.position-right-option-icon {
+  margin: 0 6px;
+}
