@@ -924,6 +924,13 @@
 .action-btn:hover {
   opacity: 1 !important;
 }
+.Number_product_cart {
+  width: 18px !important;
+  height: 19px !important;
+  right: 2px !important;
+  top: 5px !important;
+  font-size: 12px !important;
+}
 }
 /*Iphone(480 x 640)*/
 @media screen and (max-width: 320px){

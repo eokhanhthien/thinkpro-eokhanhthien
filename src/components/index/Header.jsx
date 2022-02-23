@@ -174,6 +174,7 @@ function showSumMoney(cart) {
               
               <NavLink to="/Cart" className="icon-header-option-add-cart ">
                 <i className="fal fa-cart-plus position-right-option-icon icon_news" />
+                {showSumProduct(props.Cart)>0 && <div className="Number_product_cart">{showSumProduct(props.Cart)}</div>}
                 <div className="Cart-hover-list">
                   <span className="Number-products">{showSumProduct(props.Cart)} sản phẩm </span>
                   <span>trong giỏ hàng</span>

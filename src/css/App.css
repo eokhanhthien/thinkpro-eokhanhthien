@@ -276,6 +276,19 @@ button.Cart-btn-add-products {
   color: black;
 }
 
+.Number_product_cart{
+  width: 20px;
+  height: 20px;
+  background-color: #06C1D4;
+  position: absolute;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  border-radius: 50px;
+  right: 0;
+  top: 0;
+}
+
 .row.space-icon-header {
   justify-content: center;
   margin-top: 12px;
