@@ -274,6 +274,7 @@ button.Cart-btn-add-products {
   margin: 0 16px;
   cursor: pointer;
   color: black;
+  position: relative;
 }
 
 .Number_product_cart{
