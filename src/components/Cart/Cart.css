@@ -76,13 +76,14 @@ button.Add-cart-btn-order {
 
 .Cart_container{
   margin-top: 72px;
+  margin-bottom: 36px;
 }
 .img-not-cart-empty img{
   width: 100%;
 }
 .img-not-cart-empty{
   width: 100%;
-  margin: 0 auto;
+  margin: 52px auto 0 auto;
 }
 .Container-img-not-cart-empty{
   width: 300px;
