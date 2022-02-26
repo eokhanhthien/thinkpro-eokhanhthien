@@ -262,6 +262,41 @@ button.Cart-btn-add-products {
   background-color: rgb(255, 255, 255);
   margin: 0 16px;
   cursor: pointer;
+  position: relative;
+}
+.icon-header-option:hover .User_login{
+  opacity: 1;
+  visibility: visible;
+}
+.User_login{
+  position: absolute;
+  background-color: rgb(255 255 255);
+  width: 200px;
+  max-height:300px ;
+  right: 0;
+  top: 72px;
+  border: 1px solid white;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  text-align: start;
+  padding: 12px;
+  opacity: 0;
+  transition: 0.3s;
+
+  visibility: hidden; /* fix hover con */
+}
+
+.User_login button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px ;
+  border: 1px solid #06c1d4;
+  color: white;
+  background-color: #06c1d4;
+  cursor: pointer;
+}
+.User_logup{
+font-size: 13px;
 }
 
 .icon-header-option-add-cart {

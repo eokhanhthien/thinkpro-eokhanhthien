@@ -217,6 +217,10 @@ function showSumMoney(cart) {
 
               <div className="icon-header-option">
                 <i className="far fa-user-circle position-right-option-icon" />
+                <div className="User_login">
+                  <div> <NavLink to="/Login"> <button> Đăng nhập</button></NavLink></div>
+                  <p className="User_logup">Chưa có tài khoản? <a>Đăng ký</a> </p>
+                </div>
               </div>
             </div>
             {/* <a class="Header-icon" href=""><i class="far fa-bell"></i></a>

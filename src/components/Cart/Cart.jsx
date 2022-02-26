@@ -40,6 +40,8 @@ function Cart(props) {
        thumbnail={item.product.thumbnail}
        sku={item.product.sku}
        quantity = {item.quantity}
+       shared_url = {item.product.shared_url}
+       cur_sku={item.product.cur_sku}
        ></CartItem>
 
       })

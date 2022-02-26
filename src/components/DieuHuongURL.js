@@ -14,6 +14,8 @@ import PageAllPc from './PageAllPc/PageAllPc';
 import PageAllMouse from './PageAllMouse/PageAllMouse.jsx'
 import News from './PageNews/News';
 import NewsDetail from './NewsDetail/NewsDetail';
+import Login from './Auth/Login';
+import Registration from './Auth/Registration';
 
 function DieuHuongURL(props) {
     return (
@@ -26,6 +28,8 @@ function DieuHuongURL(props) {
         <Route exact path="/PageAllAccessory" element={<PageAllAccessory/>} />
         <Route exact path="/PageAllMouse" element={<PageAllMouse/>} />
         <Route exact path="/PageNews" element={<News/>} />
+        <Route exact path="/Login" element={<Login/>} />
+        <Route exact path="/Registration" element={<Registration/>} />
         <Route exact path='/PageNewsDetail/:id' element={<NewsDetail/>} />
         <Route exact path='/DetailLaptop/:id/:option' element={<DetailLaptop/>} />
      </Routes>

@@ -2,6 +2,13 @@ import React from 'react';
 import { currencyFormat } from "../Functional/FormatNumber";
 import { connect } from 'react-redux';
 import { actRemoveProductInCart} from "../../redux/actions/index.js"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
 
 function CartItem(props) {
     function onDeleteProduct(item) {
@@ -11,9 +18,10 @@ function CartItem(props) {
     return (
         <div className="row no-gutters Add-cart-boder">
         <div className="col l-3 m-3 c-3"> 
-          <div className="Add-cart-size-img">
+        <NavLink to={`/DetailLaptop/${props.shared_url}/${props.cur_sku}`}> <div className="Add-cart-size-img">
             <img src={`https://lumen.thinkpro.vn/${props.thumbnail}`} alt="" />
           </div> 
+        </NavLink> 
         </div>
         <div className="col l-7 m-6 c-6">
           <h3>{props.name}</h3>

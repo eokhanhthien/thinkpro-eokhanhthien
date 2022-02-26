@@ -1,0 +1,60 @@
+.Form_Login{
+    /* width: 400px; */
+   
+    background-color: #f0eeeb;
+    margin: 120px auto;
+    padding: 32px 16px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Form_Login_container{
+    width: 100%;
+    margin: 0px auto;
+}
+.Form_Login h2 {
+    text-align: center;
+    margin: 0 0 23px 0;
+    font-size: 32px;
+    color:#06c1d4;
+}
+
+.title_Form {
+    margin: 16px 0 5px 0;
+    font-size: 18px;
+}
+
+.Form_Login input.Form_input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.Submit_login{
+    text-align: center;
+    padding: 12px 0;
+}
+.Submit_login input{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #06c1d4;
+    font-size: 16px;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+
+}
+
+.Logup_text {
+    font-size: 15px;
+    color: #06c1d4;
+    margin-top: 16px;
+}
+
+.error{
+    color: red;
+    padding: 5px 0;
+}
