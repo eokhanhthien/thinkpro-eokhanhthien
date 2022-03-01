@@ -5,7 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 //Create Store redux
-import store from './redux/store';
+// import store from './redux/store';
+import store from './reduxtoolkit/store';
 import { Provider } from 'react-redux';
 
 

@@ -9,7 +9,7 @@ import {
 import queryString from "query-string"
 import postApi from '../../api/postApi';
 import SearchItem from "../SearchItem/SearchItem";
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import { currencyFormat } from "../Functional/FormatNumber";
 
 function Header(props) {
@@ -25,6 +25,8 @@ function Header(props) {
     name_like:'',
   })
 
+  const cart = useSelector(state => state.carts)
+// console.log(cart);
   useEffect(() => {
           (async function () {
           // _limit=10&_page=1
@@ -88,9 +90,9 @@ function Header(props) {
 
   function showSumProduct(cart) {
     var sumProduct=0;
-    if(cart.length>0){
-      for(var i=0;i< cart.length;i++){
-        sumProduct+= cart[i].quantity;
+    if(cart.cartItem.length>0){
+      for(var i=0;i< cart.cartItem.length;i++){
+        sumProduct+= cart.cartItem[i].cartQuantity;
       }
     }
     return sumProduct; 
@@ -98,9 +100,9 @@ function Header(props) {
 
 function showSumMoney(cart) {
   var sum=0;
-  if(cart.length>0){
-    for(var i=0;i< cart.length;i++){
-      sum+=cart[i].product.price * cart[i].quantity;
+  if(cart.cartItem.length>0){
+    for(var i=0;i< cart.cartItem.length;i++){
+      sum+=cart.cartItem[i].price * cart.cartItem[i].cartQuantity;
     }
   }
   return sum; 
@@ -174,27 +176,27 @@ function showSumMoney(cart) {
               
               <NavLink to="/Cart" className="icon-header-option-add-cart ">
                 <i className="fal fa-cart-plus position-right-option-icon icon_news" />
-                {showSumProduct(props.Cart)>0 && <div className="Number_product_cart">{showSumProduct(props.Cart)}</div>}
+                {showSumProduct(cart)>0 && <div className="Number_product_cart">{showSumProduct(cart)}</div>}
                 <div className="Cart-hover-list">
-                  <span className="Number-products">{showSumProduct(props.Cart)} sản phẩm </span>
+                  <span className="Number-products">{showSumProduct(cart)} sản phẩm </span>
                   <span>trong giỏ hàng</span>
                   
                 <div className="Setheight_Header_product-cart">
                   {
-                    props.Cart.map((item,index)=>{
+                    cart.cartItem.map((item,index)=>{
                       return (
                       <div key={index} className="row Header_product-cart">
                         <div className="col l-3 m-3 c-3">
                       <div className="Cart-hover-list-size-img">
-                        <img src={`https://lumen.thinkpro.vn/${item.product.thumbnail}`} alt="" />{" "}
+                        <img src={`https://lumen.thinkpro.vn/${item.thumbnail}`} alt="" />{" "}
                       </div>
                     </div>
                     <div className="col l-9 m-9 c-9">
                       <div className="Cart-number-products-name">
-                        {item.product.name}
+                        {item.name}
                       </div>
                       <div className="Cart-number-products-name-price">
-                        {currencyFormat(item.product.price)} ₫ x {item.quantity}
+                        {currencyFormat(item.price)} ₫ x {item.quantity}
                       </div>
                     </div>
                     </div>
@@ -206,7 +208,7 @@ function showSumMoney(cart) {
                      <div className="col l-12">
                      <NavLink to="/Cart"> 
                        <button className="Cart-btn-add-products">
-                        Giỏ hàng: {currencyFormat(showSumMoney(props.Cart))} ₫
+                        Giỏ hàng: {currencyFormat(showSumMoney(cart))} ₫
                       </button>
                       </NavLink>
                     </div>
@@ -233,13 +235,13 @@ function showSumMoney(cart) {
   );
 }
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    Cart: state.Cart
-  }
-}
+// const mapStateToProps = (state, ownProps) => {
+//   return {
+//     Cart: state.Cart
+//   }
+// }
 
-export default connect(mapStateToProps, null, null)(Header)
+// export default connect(mapStateToProps, null, null)(Header)
 
 
-
+export default Header

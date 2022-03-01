@@ -925,11 +925,12 @@
   opacity: 1 !important;
 }
 .Number_product_cart {
-  width: 18px !important;
-  height: 19px !important;
-  right: 2px !important;
-  top: 5px !important;
-  font-size: 12px !important;
+  width: 13px !important;
+  height: 16px !important;
+  right: 9px !important;
+  top: 8px !important;
+  font-size: 8px !important;
+  line-height: 17px !important;
 }
 }
 /*Iphone(480 x 640)*/

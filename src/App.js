@@ -13,11 +13,45 @@ import {
   useLocation,                                                                                                                                                      
 } from "react-router-dom";
 
-
+import { useEffect } from "react";
+//import firebase auth
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+// Configure Firebase.
+const config = {
+  apiKey: 'AIzaSyBNNPC-nTqt1aImRWGrnZ5P_ZsULaETJs4',
+  authDomain: 'thinkpro-eokhanhthien.firebaseapp.com',
+  // ...
+};
+firebase.initializeApp(config);
 
 
 
 function App() {
+  //Handle firebase auth
+  useEffect(()=>{
+    const unregisterAuthObserver = firebase.auth().onAuthStateChanged(async (user )=> {
+      if(!user){
+      
+        console.log("not login");  
+        return;
+      }
+      console.log("user is : ",user)
+
+      const token = await user.getIdToken();
+      console.log("Token is : ",token)
+
+      // dispatch(userSlice.actions.saveUserLogin({
+      //   dataUser: user,
+      // }))
+
+
+    });
+    return () => unregisterAuthObserver();
+  },[]);
+
+
   return (
     <Router>
       <Header />

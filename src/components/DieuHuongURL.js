@@ -22,14 +22,14 @@ function DieuHuongURL(props) {
      <Routes>
         <Route exact path="" element={<Home></Home>} />
         <Route exact path="/" element={<Home/>} />
-        <Route exact path="/Cart" element={<Cart/>} />
-        <Route exact path="/PageAllLaptop" element={<PageAllLaptop/>} />
+         <Route exact path="/Cart" element={<Cart/>} />
+       <Route exact path="/PageAllLaptop" element={<PageAllLaptop/>} />
         <Route exact path="/PageAllPc" element={<PageAllPc/>} />
         <Route exact path="/PageAllAccessory" element={<PageAllAccessory/>} />
         <Route exact path="/PageAllMouse" element={<PageAllMouse/>} />
         <Route exact path="/PageNews" element={<News/>} />
         <Route exact path="/Login" element={<Login/>} />
-        <Route exact path="/Registration" element={<Registration/>} />
+        <Route exact path="/Registration" element={<Registration/>} /> 
         <Route exact path='/PageNewsDetail/:id' element={<NewsDetail/>} />
         <Route exact path='/DetailLaptop/:id/:option' element={<DetailLaptop/>} />
      </Routes>

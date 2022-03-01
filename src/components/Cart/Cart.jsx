@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import './Cart.css'
 import CartItem from './CartItem';
 import CartResult from "./CartResult"
@@ -8,13 +8,14 @@ function Cart(props) {
   window.scrollTo(0, 0)
   function showSumProduct(cart) {
     var sumProduct=0;
-    if(cart.length>0){
-      for(var i=0;i< cart.length;i++){
-        sumProduct+= cart[i].quantity;
+    if(cart.cartItem.length>0){
+      for(var i=0;i< cart.cartItem.length;i++){
+        sumProduct+= cart.cartItem[i].cartQuantity;
       }
     }
     return sumProduct; 
 }
+const cart = useSelector(state => state.carts)
 
     return (
 <div className="Cart_container">
@@ -27,21 +28,21 @@ function Cart(props) {
     </div>
     <div className="col l-1"><span>/ Cart</span></div>
   </div>
-  <div className="col l-12 Content-2-container-reduce-price"><h1>Giỏ hàng ({showSumProduct(props.Cart)})</h1></div>
+  <div className="col l-12 Content-2-container-reduce-price"><h1>Giỏ hàng ({showSumProduct(cart)})</h1></div>
   <div className="row no-gutters">
     <div className="col l-9 m-12 c-12">
-    { props.Cart.length > 0 ?
-      props.Cart.map((item, index) =>{
+    { cart.cartItem.length > 0 ?
+     cart.cartItem.map((item, index) =>{
        return <CartItem
        key={index}
-       oneProduct={item.product}
-       name={item.product.name}
-       price={item.product.price}
-       thumbnail={item.product.thumbnail}
-       sku={item.product.sku}
-       quantity = {item.quantity}
-       shared_url = {item.product.shared_url}
-       cur_sku={item.product.cur_sku}
+       oneProduct={item}
+       name={item.name}
+       price={item.price}
+       thumbnail={item.thumbnail}
+       sku={item.sku}
+       cartQuantity = {item.cartQuantity}
+       shared_url = {item.shared_url}
+       cur_sku={item.cur_sku}
        ></CartItem>
 
       })
@@ -54,7 +55,7 @@ function Cart(props) {
     </div>
 
   <CartResult
-  TotalInCart={props.Cart}
+  TotalInCart={cart.cartItem}
   ></CartResult>
 
     

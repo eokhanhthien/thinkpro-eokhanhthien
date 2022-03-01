@@ -3,12 +3,12 @@ import { currencyFormat } from "../Functional/FormatNumber";
 
 function CartResult(props) {
     // console.log(props.TotalInCart);
-    
+
     function showSumMoney(cart) {
         var sum=0;
         if(cart.length>0){
           for(var i=0;i< cart.length;i++){
-            sum+=cart[i].product.price * cart[i].quantity;
+            sum+=cart[i].price * cart[i].cartQuantity;
           }
         }
         return sum; 

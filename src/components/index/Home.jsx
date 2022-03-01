@@ -21,6 +21,7 @@ import {
   Link,
   NavLink,
 } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 SwiperCore.use([Navigation]);
 // Import Swiper - END---------------------------------
@@ -84,8 +85,9 @@ function Home(props) {
   }, []);
 
 
+  // const datastore = useSelector(state => state.carts)
 
-  // console.log(product);
+  // console.log(datastore);
 
   return (
     <div className="Content-container">

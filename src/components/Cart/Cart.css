@@ -93,3 +93,12 @@ button.Add-cart-btn-order {
   text-align: center;
   margin: 14px 0px;
 }
+button.btnChangequantityCart {
+  padding: 7px;
+  border: none;
+  background-color: #d4d4e1;
+  cursor: pointer;
+  margin: 0 8px;
+  width: 24px;
+  text-align: center;
+}

@@ -314,16 +314,16 @@ font-size: 13px;
 }
 
 .Number_product_cart{
-  width: 20px;
-  height: 20px;
+  width: 44%;
+  height: 50%;
   background-color: #06C1D4;
   position: absolute;
   text-align: center;
-  line-height: 20px;
+  line-height: 26px;
   color: white;
   border-radius: 50px;
   right: 0;
-  top: 0;
+  top: -4px;
 }
 
 .row.space-icon-header {

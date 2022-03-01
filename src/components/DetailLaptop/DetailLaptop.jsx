@@ -10,6 +10,9 @@ import SwiperThumbnailProductDetail from "../Functional/Swiper/SwiperThumbnailPr
 import { actAddToCart } from "../../redux/actions/index"
 import { connect } from "react-redux";
 import Btn_loading from "../Functional/ButtonLoading/Btn_loading";
+import { useDispatch } from "react-redux";
+import {addToCart} from "../../reduxtoolkit/cartSlide"
+import { useSelector } from "react-redux";
 
 function DetailLaptop(props) {
   const { id, option } = useParams();
@@ -17,6 +20,10 @@ function DetailLaptop(props) {
 
   const [scroll, setScroll] = useState(false);
   
+  const dispatch = useDispatch();
+  const cart = useSelector(state => state.carts)
+  // console.log(cart.cartItem);
+
   useEffect(() => {
     let isMounted = true;//Dư bộ nhớ các thứ thì phải kiểm tra đầu vào
     (async function () {
@@ -41,15 +48,18 @@ function DetailLaptop(props) {
       
     });
 
-    
+
   }, [ProductLaptopDetail]);
 
   useEffect (()=>{
     window.scrollTo(0, 0)
+    
   },[])
 
-  function onAddToCart(item) {
-      props.onAddToCart(item);
+  function onAddToCart(product) {
+      // props.onAddToCart(item);
+      dispatch(addToCart(product))
+      
   }
  
 
