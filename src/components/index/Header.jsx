@@ -12,6 +12,10 @@ import SearchItem from "../SearchItem/SearchItem";
 import { connect, useSelector } from "react-redux";
 import { currencyFormat } from "../Functional/FormatNumber";
 
+
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+
 function Header(props) {
   const [ScrollDown, setScrollDown] = useState(false);
   const [isLoading, SetisLoading] = useState(false);
@@ -108,7 +112,14 @@ function showSumMoney(cart) {
   return sum; 
 }
 
+  
+const user = useSelector(state => state.users)
+// console.log(user.userInfo._delegate)
 
+function handleLogout() {
+  firebase.auth().signOut();
+  window.location.reload();
+}
   return (
     <div className={ScrollDown ? "Header Header-down" : "Header Header-up"}>
       <div className="Container grid wide">
@@ -217,13 +228,34 @@ function showSumMoney(cart) {
                 </div>
               </NavLink>
 
-              <div className="icon-header-option">
-                <i className="far fa-user-circle position-right-option-icon" />
-                <div className="User_login">
-                  <div> <NavLink to="/Login"> <button> Đăng nhập</button></NavLink></div>
-                  <p className="User_logup">Chưa có tài khoản? <a>Đăng ký</a> </p>
+             {user.userInfo._delegate ? <div className="icon-header-option">
+             <i className="far fa-user-circle position-right-option-icon" />
+                 <div className="User_login">
+                  <p >Tài khoản </p>
+                  <div className="row">
+                    <div className="col l-4"> <div className="ImgURL_user " >{<img src={user.userInfo._delegate.photoURL} alt="" /> }</div></div>
+                    <div className="col l-8"> <div> <span className="info_text_user_name "> {user.userInfo._delegate.displayName}</span></div></div>
+
+                 
+                  </div>
+                 
+                <div> <span className="info_text_user">Email: {user.userInfo._delegate.email}</span></div>
+                <div>  <button onClick={() => handleLogout()}><i class="fas fa-sign-out icon_login_user"></i>Đăng xuất</button></div>
+
                 </div>
               </div>
+             :
+             <div className="icon-header-option">
+                <i className="far fa-user-circle position-right-option-icon" />
+                <div className="User_login">
+                
+                  <div> <NavLink to="/Login"> <button> <i className="fal fa-sign-in-alt icon_login_user"></i>Đăng nhập</button></NavLink></div>
+                  <p className="User_logup">Chưa có tài khoản? <a>Đăng ký</a> </p>
+                </div>
+              </div>  
+              
+              }
+
             </div>
             {/* <a class="Header-icon" href=""><i class="far fa-bell"></i></a>
                 <a class="Header-icon" href=""><i class="fal fa-cart-plus"></i></a>

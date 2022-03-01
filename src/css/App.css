@@ -271,7 +271,7 @@ button.Cart-btn-add-products {
 .User_login{
   position: absolute;
   background-color: rgb(255 255 255);
-  width: 200px;
+  width: 260px;
   max-height:300px ;
   right: 0;
   top: 72px;
@@ -733,4 +733,28 @@ img.logo-thuonghieu:hover{
 }
 i.fal.fa-cart-plus.position-right-option-icon {
   margin: 0 6px;
+}
+
+.ImgURL_user {
+  width: 46px;
+  margin: 0 auto;
+}
+
+.ImgURL_user img{
+  width: 100%;
+  border-radius: 50px;
+}
+span.info_text_user {
+  font-size: 12px;
+}
+
+.info_text_user_name{
+  font-size: 14px;
+  font-weight: 600;
+
+}
+
+i.fal.fa-sign-in-alt.icon_login_user {
+  font-size: 14px;
+  margin: 0 9px;
 }

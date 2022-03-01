@@ -399,19 +399,20 @@ function DetailLaptop(props) {
 }
 
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    Cart: state.Cart
-  }
-}
+// const mapStateToProps = (state, ownProps) => {
+//   return {
+//     Cart: state.Cart
+//   }
+// }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    onAddToCart: (item) => {
-      dispatch(actAddToCart(item,1))
-    }
-  }
-}
+// const mapDispatchToProps = (dispatch, ownProps) => {
+//   return {
+//     onAddToCart: (item) => {
+//       dispatch(actAddToCart(item,1))
+//     }
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps, null)(DetailLaptop)
+// export default connect(mapStateToProps, mapDispatchToProps, null)(DetailLaptop)
 
+export default DetailLaptop;

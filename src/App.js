@@ -18,6 +18,8 @@ import { useEffect } from "react";
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
+import { useDispatch, useSelector } from "react-redux";
+import { userCurrent } from "./reduxtoolkit/userSlice";
 // Configure Firebase.
 const config = {
   apiKey: 'AIzaSyBNNPC-nTqt1aImRWGrnZ5P_ZsULaETJs4',
@@ -29,28 +31,25 @@ firebase.initializeApp(config);
 
 
 function App() {
+ const dispatch = useDispatch();
+
   //Handle firebase auth
   useEffect(()=>{
     const unregisterAuthObserver = firebase.auth().onAuthStateChanged(async (user )=> {
-      if(!user){
-      
+      if(!user){ 
         console.log("not login");  
         return;
       }
-      console.log("user is : ",user)
+      // console.log("user is : ",user)
 
-      const token = await user.getIdToken();
-      console.log("Token is : ",token)
-
-      // dispatch(userSlice.actions.saveUserLogin({
-      //   dataUser: user,
-      // }))
-
-
+      // const token = await user.getIdToken();
+      // console.log("Token is : ",token)
+      dispatch(userCurrent(user))
+     
     });
     return () => unregisterAuthObserver();
   },[]);
-
+  
 
   return (
     <Router>
