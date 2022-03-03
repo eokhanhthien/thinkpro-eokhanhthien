@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./Login.css"
 import {
     BrowserRouter as Router,
@@ -22,8 +22,14 @@ const uiConfig = {
     ],
   };
 
+ 
 
 function Login(props) {
+ useEffect (()=>{
+    window.scrollTo(0, 0)
+    
+  },[])
+
     return (
         <div className="grid wide">
         <div className="row Form_Login_container">

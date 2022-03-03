@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -8,7 +8,10 @@ import {
   } from "react-router-dom";
 
 function Registration(props) {
-
+    useEffect (()=>{
+        window.scrollTo(0, 0)
+        
+      },[])
 
     function getValue(id) {
         return document.getElementById(id).value.trim();

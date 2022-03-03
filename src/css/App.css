@@ -272,7 +272,7 @@ button.Cart-btn-add-products {
   position: absolute;
   background-color: rgb(255 255 255);
   width: 260px;
-  max-height:300px ;
+  /* max-height:300px ; */
   right: 0;
   top: 72px;
   border: 1px solid white;
@@ -284,6 +284,12 @@ button.Cart-btn-add-products {
   transition: 0.3s;
 
   visibility: hidden; /* fix hover con */
+}
+
+.icon_info_user_login {
+  font-size: 20px;
+  margin: 0 6px 0 0;
+  color: #06c1d4;
 }
 
 .User_login button {
@@ -757,4 +763,8 @@ span.info_text_user {
 i.fal.fa-sign-in-alt.icon_login_user {
   font-size: 14px;
   margin: 0 9px;
+}
+i.fas.fa-angle-right.custom_icon_right {
+  margin-left: 28px;
+  color: darkgrey;
 }
