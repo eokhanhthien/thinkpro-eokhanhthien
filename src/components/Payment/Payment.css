@@ -1,0 +1,95 @@
+.Payment_conatainer{
+    margin-top: 72px;
+    padding-bottom: 36px;
+    background-color: #ECF0F4;
+    overflow-x: hidden;
+}
+
+.info_user
+{
+    width: 100%;
+    background-color: rgb(255, 255, 255); 
+    border: 1px solid #e3e7ef ;
+    margin-bottom: 20px;
+}
+
+.info_user_title{
+    padding: 24px;
+
+}
+
+.title_info{
+    font-size: 18px;
+    margin-left: 10px;
+}
+.title_info_icon {
+    font-size: 24px;
+}
+.title_container{
+    margin-bottom: 30px;
+}
+
+.custom_text_payment{
+    color: #5b5b5c;  
+    margin: 22px 0 0 0;
+
+}
+
+input.custom_input_payment {
+    padding: 16px 8px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #c3c4c5;
+    border-radius: 4px;
+}
+
+.position_pay {  
+    border: 2px solid #0065EE;
+    margin: 10px;
+    padding: 30px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.position_pay input{
+    cursor: pointer;
+}
+.col.l-12.position_payment_container_title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 26px 0 4px 0;
+}
+.btn_submit_positon {
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+.btn_submit_positon button {
+    padding: 10px;
+    width: 80%;
+    font-size: 17px;
+    border-radius: 6px;
+    border: 1px solid #003BAE;
+    background-color: #003BAE;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+.option_choose_place {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px 5px;
+    text-align: center;
+}
+
+.info_user_title img{width: 100%;}
+
+.isChoose{
+    color: #0065EE;
+    border-bottom: 2px solid #0065EE;
+}
+.pd_20{
+    padding: 0 10px 0 10px;
+}

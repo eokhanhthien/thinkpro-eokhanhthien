@@ -16,6 +16,7 @@ import News from './PageNews/News';
 import NewsDetail from './NewsDetail/NewsDetail';
 import Login from './Auth/Login';
 import Registration from './Auth/Registration';
+import Payment from './Payment/Payment';
 
 function DieuHuongURL(props) {
     return (
@@ -23,6 +24,7 @@ function DieuHuongURL(props) {
         <Route exact path="" element={<Home></Home>} />
         <Route exact path="/" element={<Home/>} />
          <Route exact path="/Cart" element={<Cart/>} />
+         <Route exact path="/Payment" element={<Payment/>} />
        <Route exact path="/PageAllLaptop" element={<PageAllLaptop/>} />
         <Route exact path="/PageAllPc" element={<PageAllPc/>} />
         <Route exact path="/PageAllAccessory" element={<PageAllAccessory/>} />
