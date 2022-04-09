@@ -240,27 +240,27 @@ function handleLogout() {
                   </div>
                   {/* <span className="info_text_user">Email: {user.userInfo._delegate.email}</span> */}
                   <div className="row no-gutters">
-                  <div className="col l-2 m-2 c-2"><i class="fas fa-user-alt icon_info_user_login"></i></div>
+                  <div className="col l-2 m-2 c-2"><i className="fas fa-user-alt icon_info_user_login"></i></div>
                   <div className="col l-8 m-8 c-8"> Thông tin tài khoản</div>
-                  <div className="col l-2 m-2 c-2"><i class="fas fa-angle-right custom_icon_right"></i></div>
+                  <div className="col l-2 m-2 c-2"><i className="fas fa-angle-right custom_icon_right"></i></div>
                   </div>
                   <div className="row no-gutters">
-                  <div className="col l-2 m-2 c-2"><i class="fas fa-box-heart icon_info_user_login"></i></div>
+                  <div className="col l-2 m-2 c-2"><i className="fas fa-box-heart icon_info_user_login"></i></div>
                   <div className="col l-8 m-8 c-8"> Yêu thích</div>
-                  <div className="col l-2 m-2 c-2"><i class="fas fa-angle-right custom_icon_right"></i></div>
+                  <div className="col l-2 m-2 c-2"><i className="fas fa-angle-right custom_icon_right"></i></div>
                   </div>
                   <div className="row no-gutters">
-                  <div className="col l-2 m-2 c-2"><i class="fas fa-map-marker-alt icon_info_user_login"></i></div>
+                  <div className="col l-2 m-2 c-2"><i className="fas fa-map-marker-alt icon_info_user_login"></i></div>
                   <div className="col l-8 m-8 c-8"> Thông tin địa chỉ</div>
-                  <div className="col l-2 m-2 c-2"><i class="fas fa-angle-right custom_icon_right"></i></div>
+                  <div className="col l-2 m-2 c-2"><i className="fas fa-angle-right custom_icon_right"></i></div>
                   </div>
                   <div className="row no-gutters">
-                  <div className="col l-2 m-2 c-2"><i class="fas fa-shopping-cart icon_info_user_login"></i></div>
+                  <div className="col l-2 m-2 c-2"><i className="fas fa-shopping-cart icon_info_user_login"></i></div>
                   <div className="col l-8 m-8 c-8"> Lịch sử mua hàng</div>
-                  <div className="col l-2 m-2 c-2"><i class="fas fa-angle-right custom_icon_right"></i></div>
+                  <div className="col l-2 m-2 c-2"><i className="fas fa-angle-right custom_icon_right"></i></div>
                   </div>
 
-                <div>  <button onClick={() => handleLogout()}><i class="fas fa-sign-out icon_login_user"></i>Đăng xuất</button></div>
+                <div>  <button onClick={() => handleLogout()}><i className="fas fa-sign-out icon_login_user"></i>Đăng xuất</button></div>
 
                 </div>
               </div>

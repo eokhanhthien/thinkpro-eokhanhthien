@@ -932,6 +932,9 @@
   font-size: 8px !important;
   line-height: 17px !important;
 }
+.Modal_Cart_container{
+  width: 90% !important;
+}
 }
 /*Iphone(480 x 640)*/
 @media screen and (max-width: 320px){

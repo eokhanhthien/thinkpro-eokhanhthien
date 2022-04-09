@@ -17,7 +17,9 @@ function CartItem(props) {
 
     function onDeleteProduct(item) {
         // props.onDeleteProduct(item);
-        dispatch(removeFromCart(item))
+        // dispatch(removeFromCart(item))
+        props.handleOpenModal(true);
+        props.itemDeleteFromCart(item)
     }
 
     function handleDecrease(item){

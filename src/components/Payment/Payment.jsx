@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Payment.css"
 import CartResult from "../Cart/CartResult"
 import { useSelector } from "react-redux";
+import LocationForm from "../Functional/Location/LocationForm";
 
 function Payment(props) {
 const cart = useSelector(state => state.carts)
@@ -58,12 +59,12 @@ function handleChangeOption(value) {
                            </div>
                       
                     
-                      <div className="row no-gutters"> 
+                      <div className="row no-gutters option_Location"> 
                       <div onClick={()=>handleChangeOption(true)} className={isPayinShop?"col l-2 m-6 c-6 option_choose_place isChoose" : "col l-2 m-6 c-6 option_choose_place"}>Tại cửa hàng</div>
                       <div onClick={()=>handleChangeOption(false)} className={isPayinShop?"col l-2 m-6 c-6 option_choose_place " : "col l-2 m-6 c-6 option_choose_place isChoose"}>Giao tận nơi</div>
                     </div>
 
-                    {isPayinShop ? <div className="row no-gutters ">
+                    {isPayinShop ? <div className="row no-gutters">
                       <div className="col l-12 m-12 c-12 position_payment_container_title">Thành phố Hồ Chí Minh</div>
                       <div className="col l-6 m-12 c-12 position_payment_container"><div className="position_pay"> <input type="radio" name="positon" /> Số 5 - 7 Nguyễn Huy Tưởng, Phường 6, Quận Bình Thạnh, Hồ Chí Minh</div> </div>
                       <div className="col l-6 m-12 c-12 position_payment_container"><div className="position_pay"> <input type="radio" name="positon" /> 95 Trần Thiện Chánh, F12, Q10, HCM</div> </div>
@@ -74,12 +75,13 @@ function handleChangeOption(value) {
 
                     <div className="row no-gutters"> 
                       <div className="col l-6 m-12 c-12">
-                          <div className="custom_text_payment">Tỉnh / Thành phố</div>
+                        <LocationForm></LocationForm>
+                          {/* <div className="custom_text_payment">Tỉnh / Thành phố</div>
                           <input className="custom_input_payment" type="text" name="" id="" placeholder="Tỉnh / Thành phố" />
                           <div className="custom_text_payment">Quận / Huyện</div>
                           <input className="custom_input_payment" type="text" name="" id="" placeholder="Quận / Huyện" />
                           <div className="custom_text_payment">Phường / Xã</div>
-                          <input className="custom_input_payment" type="text" name="" id="" placeholder="Phường / Xã" />
+                          <input className="custom_input_payment" type="text" name="" id="" placeholder="Phường / Xã" /> */}
                           <div className="custom_text_payment">Địa chỉ cụ thể</div>
                           <input className="custom_input_payment" type="text" name="" id="" placeholder="Địa chỉ cụ thể" />
                           <span className="Detail-custom-text-content">Ví dụ: 1205 E1, Gold Park, 122, Phố Trung Kính</span>

@@ -58,7 +58,6 @@ input.custom_input_payment {
 .col.l-12.position_payment_container_title {
     font-size: 18px;
     font-weight: 600;
-    margin: 26px 0 4px 0;
 }
 .btn_submit_positon {
     text-align: center;
@@ -92,4 +91,7 @@ input.custom_input_payment {
 }
 .pd_20{
     padding: 0 10px 0 10px;
+}
+.option_Location{
+    margin-bottom: 26px;
 }

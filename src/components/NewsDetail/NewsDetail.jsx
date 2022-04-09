@@ -20,7 +20,7 @@ function NewsDetail(props) {
         )()
         window.scrollTo(0, 0)
     },[])
-    console.log(News);
+    // console.log(News);
     return (
         <div>
 {News?   <div className="Content-container News_title">

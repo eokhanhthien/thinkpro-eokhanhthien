@@ -103,3 +103,67 @@ button.btnChangequantityCart {
   width: 24px;
   text-align: center;
 }
+.Modal_Cart_overlay{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.Modal_Cart_container{
+  text-align: center;
+  padding: 20px 8px;
+  width: 480px;
+  background-color: #e1e2e3;
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ border-radius: 4px;
+ visibility: hidden;
+ opacity: 0;
+ transition: 0.4s;
+}
+
+.isActiveModalcart{
+visibility: visible;
+ opacity: 1;
+}
+
+.icon_Modal_cart {
+  font-size: 46px;
+  color: blue;
+}
+.text_Modal_cart {
+  font-size: 20px;
+  margin: 22px 0;
+}
+.btn_Modal_cart{
+  justify-content: center;
+  
+}
+
+.btn-item-option{
+  padding: 8px 26px;
+  font-size: 16px;
+  margin: 0 6px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.delete_cart{
+  background-color: #d53b2a;
+  color: white;
+  border: 1px solid #d53b2a;
+
+}
+.no_delaete_cart{
+  background-color: #06c1d4;
+  color: white;
+  border: 1px solid #06c1d4;
+}
