@@ -77,7 +77,7 @@ function SkeletonArticleDetail(props) {
               </div>
 
 
-      <div  className="col l-12 c-12 m-12 Detail-option-choose-boder">
+      <div  className="col l-12 c-12 m-12 ">
                 <div className="row">
                   <div className="col l-8 c-8 m-8">
                    
@@ -137,7 +137,7 @@ function SkeletonArticleDetail(props) {
   <div className="Detail-custom-text mt-50"><SkeletonsElement type="text"></SkeletonsElement></div>
   <div className="row no-gutters">
     <div className="col l-12  c-12 m-12 Container-intput-comment">
-      <textarea className="intput-comment" placeholder="Mời bạn để lại bình luận" defaultValue={""} />
+    <span className="Detail-custom-text-content center-text"><SkeletonsElement type="text"></SkeletonsElement></span>
     </div>
   </div>
 </div>

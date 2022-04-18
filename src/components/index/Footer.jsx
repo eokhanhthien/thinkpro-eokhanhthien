@@ -7,7 +7,7 @@ function Footer(props) {
         <div className="row">
           <div className="col l-3">
             <div>
-              <img src="./assets/image/logo2.svg" alt="" />
+              <img src="../image/logo2.svg" alt="" />
             </div>
           </div>
           <div className="col l-3" />

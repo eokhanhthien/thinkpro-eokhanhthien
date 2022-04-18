@@ -20,7 +20,7 @@ function News(props) {
                 _start: 0,
                 _limit: 12,
               })
-              setNews(dbNews)   
+              setNews(dbNews.data)   
         }
         
         )()

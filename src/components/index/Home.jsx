@@ -73,11 +73,11 @@ function Home(props) {
         _limit: 10,
       });
 
-      SetProductLaptop(dbLaptop);
-      SetProductLaptopMore(dbLaptopmore);
-      SetProductPC(dbPC);
-      SetProductAccessory(dbAccessory);
-      SetProductProductMouse(dbMouse)
+      SetProductLaptop(dbLaptop.data);
+      SetProductLaptopMore(dbLaptopmore.data);
+      SetProductPC(dbPC.data);
+      SetProductAccessory(dbAccessory.data);
+      SetProductProductMouse(dbMouse.data)
       if (dbLaptop && dbLaptopmore && dbPC && dbAccessory&&dbMouse) {
         SetisLoading(true);
       }

@@ -3,15 +3,18 @@
     position: absolute;
     display: none;
     background-color: white;
-    left: 0;
-    width: 100%;
+    left: -1px;
+    width: 100.7%;
     /* height: 80px;  */
     border-top:none ;
-    border: 1px solid rgb(255, 255, 255);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-left: 1px solid rgb(240, 237, 237);
+    border-right: 1px solid rgb(240, 237, 237);
+    border-bottom: 1px solid rgb(224, 223, 223);
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
     padding: 10px ;
-    bottom: -102px;
+    bottom: -101px;
+    transition: 0.3s;
   }
   
   .Content-2-container-product-info-detail-laptop-item-size-img{
@@ -26,8 +29,12 @@
   .Content-2-container-product-item:hover
     .Content-2-container-product-info-detail-laptop {
     display: block;
+ 
   }
+  .Content-2-container-product-item:hover{
+   
 
+  }
   .Content-2-container-product-info-detail-laptop {
     z-index: 1;
   }

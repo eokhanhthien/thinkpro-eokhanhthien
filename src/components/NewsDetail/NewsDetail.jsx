@@ -14,7 +14,8 @@ function NewsDetail(props) {
                 _limit: 12,
                 id:id,
               })
-              setNews(dbNews[0])   
+              setNews(dbNews.data[0])   
+         
         }
         
         )()

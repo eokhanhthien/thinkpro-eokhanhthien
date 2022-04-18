@@ -26,7 +26,7 @@ axiosClient.interceptors.request.use(
 
 axiosClient.interceptors.response.use(
     function (response) {
-        return response.data.data;  // .data để lấy data
+        return response.data;  // .data để lấy data
     },
     function (error) {
         return Promise.reject(error);

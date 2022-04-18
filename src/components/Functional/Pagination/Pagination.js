@@ -15,7 +15,7 @@ Pagination.defaultProps = {
 function Pagination(props) {
     const {pagination , onPageChange} = props;
     const {_page, _limit, _totalRows} = pagination;
-    const totalPages = Math.ceil(_totalRows / _limit);
+    const totalPages = (_totalRows/_limit);
 
     const [arrBtn, SetArrBtn] = useState([]);
 
@@ -27,7 +27,7 @@ function Pagination(props) {
     let leftSide = curentPageActiveBtn - 2;
     let rightSide = curentPageActiveBtn + 2;
     if(leftSide <= 0 ) leftSide=1;
-    if(rightSide>totalPages) rightSide = totalPages;
+    if(rightSide>Math.ceil(totalPages)) rightSide = Math.ceil(totalPages);
     let items = [];
     for (let number = leftSide ; number <= rightSide; number++) {
         items.push(
@@ -39,7 +39,7 @@ function Pagination(props) {
     useEffect(()=>{
         (async function () {
             var arr=[]
-            for(var i=1;i <= totalPages ;i++){
+            for(var i=1;i <= Math.ceil(totalPages) ;i++){
             arr.push(i);
             } 
             
@@ -58,8 +58,8 @@ function Pagination(props) {
     }
 
 
-
-    // console.log(arrBtn);
+// console.log(props.page_total);
+    // console.log(Math.ceil(totalPages));
     return (
         <div className='Custom-center-pagination'>
             <button className='Btn-Prev-Next-Pagination'
@@ -80,7 +80,7 @@ function Pagination(props) {
        {items}
 
             <button className='Btn-Prev-Next-Pagination'
-            disabled={_page >= totalPages}
+            disabled={_page >= Math.ceil(totalPages)}
             onClick={() => handlePageChange(_page + 1 )}
             >
                 <i className ="fas fa-chevron-right"></i>

@@ -18,7 +18,7 @@ function SkeletonArticle(props) {
         <div className="row no-gutters">
             
             
-        <div className="Content-2-container-product-info-detail-laptop-item-size-img mt-50 mt-r-10"><SkeletonsElement type="thumbnail-30"></SkeletonsElement> </div>
+       <SkeletonsElement type="thumbnail-30"></SkeletonsElement> 
               
           {/* <div className="Content-2-container-product-info-detail-laptop-item-size-img mt-50 mt-r-10"> <img src="./image/logo.svg" alt="" /></div>
           <div className="Content-2-container-product-info-detail-laptop-item-size-img mt-50 mt-r-10"> <img src="./image/logo.svg" alt="" /></div> */}

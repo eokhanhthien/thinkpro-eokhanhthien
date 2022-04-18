@@ -849,12 +849,12 @@
 }
 .col.l-12.c-12.m-12.Content-2-container-product-col-12 .Content-2-container-product-item-price,
 .col.l-12.c-12.m-12.Content-2-container-product-col-12 .Content-2-container-product-item-name{
-  font-size: 16px !important;
+  font-size: 14px !important;
 }
 
 .position-right-option-icon,
 .action-btn span{
-  font-size: 16px !important;
+  font-size: 14px !important;
 }
 .action-btn{
   width: 100%;
@@ -886,7 +886,7 @@
     height: 100% !important;
   }
   .Content-2-container-product-item-price {
-    font-size: 18px !important;
+    font-size: 16px !important;
   }
   .Detail-sticky-add-compare{
     padding: 7px !important;
@@ -925,8 +925,8 @@
   opacity: 1 !important;
 }
 .Number_product_cart {
-  width: 13px !important;
-  height: 16px !important;
+  width: 32% !important;
+  height: 32% !important;
   right: 9px !important;
   top: 8px !important;
   font-size: 8px !important;
@@ -934,6 +934,12 @@
 }
 .Modal_Cart_container{
   width: 90% !important;
+}
+.swiper-container-free-mode > .swiper-wrapper{
+  display: none !important;
+}
+.Content-right-item a{
+  font-size: 15px;
 }
 }
 /*Iphone(480 x 640)*/

@@ -41,7 +41,7 @@ function Header(props) {
               _limit: 10,
             })
       
-            SetFilterLaptop(dbLaptop)
+            SetFilterLaptop(dbLaptop.data)
               if (dbLaptop) {
                 SetisLoading(true);
               }

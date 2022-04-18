@@ -5,6 +5,7 @@ import CartItem from './CartItem';
 import CartResult from "./CartResult"
 import { removeFromCart } from '../../reduxtoolkit/cartSlide';
 import { useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
 function Cart(props) {
   const dispatch = useDispatch();
@@ -39,6 +40,7 @@ function handleDeleteItemFromCart(item) {
   handleOpenModal(false)
 }
 
+console.log(cart.cartItem.length)
     return (
 <div className="Cart_container">
 <div className="grid wide">
@@ -79,11 +81,17 @@ function handleDeleteItemFromCart(item) {
     }  
     </div>
 
-  <CartResult
+ { cart.cartItem.length >0 &&<CartResult
   TotalInCart={cart.cartItem}
   ></CartResult>
-
+}
     
+{ cart.cartItem.length ==0 &&
+<div >
+  <div className='btn-center'><NavLink to="/" ><button className="Add-cart-btn-order">Tiếp tục mua hàng</button></NavLink>  </div>
+
+</div>
+}
   </div>
 
   <div className={isOpenModal ? "Modal_Cart_overlay isActiveModalcart" : "Modal_Cart_overlay"}></div>

@@ -40,4 +40,6 @@
   from  {width: 0%;}
   to {width: 106%;}
 }
-
+.swiper-slide-thumb-active{
+  font-weight:bold;
+}

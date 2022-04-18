@@ -79,6 +79,32 @@ body::-webkit-scrollbar-thumb {
   visibility: hidden; /* fix hover con */
 }
 
+.Cart-hover-list::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 22px solid rgb(249 242 242);
+  position: absolute;
+  top: -23px;
+  right: 4px;
+  z-index: -10;
+}
+
+.User_login::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 22px solid rgb(249 242 242);
+  position: absolute;
+  top: -23px;
+  right: 4px;
+  z-index: -10;
+}
+
 .Cart-hover-list-size-img img {
   width: 100%;
 }
@@ -145,7 +171,7 @@ button.Cart-btn-add-products {
 
 .Header-option {
   color: black;
-  font-size: 18px;
+  font-size: 17.4px;
   margin: 0 10px;
   text-decoration: none;
   z-index: 10;
@@ -155,7 +181,7 @@ button.Cart-btn-add-products {
 }
 
 .Header-option:hover {
-  color: #242368;
+  color: #06c1d4;
 }
 
 .Header-option:hover:after {
@@ -169,7 +195,7 @@ button.Cart-btn-add-products {
   width: 0%;
   height: 2px;
   left: 0;
-  background-color: #242368;
+  background-color: #06c1d4;
   transition: 0.4s;
 }
 
@@ -189,7 +215,7 @@ button.Cart-btn-add-products {
 .Header-search-focus{
   position: absolute;
   width: 110%;
-  height: 400px;
+  height: 360px;
   background-color: #ffffff;
   display: none;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
@@ -320,8 +346,8 @@ font-size: 13px;
 }
 
 .Number_product_cart{
-  width: 44%;
-  height: 50%;
+  width: 45%;
+  height: 45%;
   background-color: #06C1D4;
   position: absolute;
   text-align: center;
@@ -358,6 +384,7 @@ i.far.fa-bell.position-right-option-icon {
 .position-left-option {
   padding-right: 70px;
   text-align: start;
+  font-weight: 600;
 }
 
 .position-right-option {
@@ -382,18 +409,19 @@ img.Content-img {
 }
 
 .Content-left-text {
-  font-size: 16px;
+  font-size: 13px;
   color: #464747;
   cursor: pointer;
   line-height: 24px;
   padding: 7px 4px 4px 4px;
+  transition: .3s;
 }
 
 
 .Content-right-item a {
   text-decoration: none;
   color: black;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .col.l-12.Content-right-item {
@@ -431,7 +459,7 @@ img.Content-img {
 }
 
 .Content-right-item-boder.active-right-item-boder {
-  background-color: #242368;
+  background-color: #0C0B73;
   border-left: 6px solid #06c1d4;
   border-bottom: 6px solid #06c1d4;
 }
@@ -449,6 +477,7 @@ img.Content-img {
 
 .Content-2-container-product img {
   width: 100%;
+  transition: .3s;
 }
 
 .Content-2-container-product-item {
@@ -469,12 +498,12 @@ img.Content-img {
   color: #868686;
 }
 .Content-2-container-product-item-name {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
 }
 
 .Content-2-container-product-item-price {
-  font-size: 20px;
+  font-size: 18px;
   color: #d74636 !important;
   font-weight: 600;
   margin-top: 10px;
@@ -507,7 +536,7 @@ img.Content-img {
 }
 
 .Content-2-container-product-item:hover .Content-2-container-product img {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .Content-2-container-product-info-detail {
@@ -712,7 +741,7 @@ img.logo-thuonghieu:hover{
 }
 
 .img-not-found-product{
-  width: 100%;
+  width: 70%;
 }
 
 .Header_product-cart{
@@ -767,4 +796,20 @@ i.fal.fa-sign-in-alt.icon_login_user {
 i.fas.fa-angle-right.custom_icon_right {
   margin-left: 28px;
   color: darkgrey;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px !important;
+  height: 50px!important;
+  background-color: #F3F5F8 ;
+  border-radius: 50px;
+  color: black !important;
+}
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-size: 20px !important;
+}
+.jtf-content{
+text-align: center;
+
 }
