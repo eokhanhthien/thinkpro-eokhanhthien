@@ -51,20 +51,21 @@ button.Add-cart-btn-order {
   border: 1px solid #06c1d4;
   border-radius: 50px;
   color: white;
-  font-size: 16px;
+  font-size: 12px;
   margin: 12px 0;
   cursor: pointer;
   font-weight: 600;
+  display: inline-block;
 }
 
 .Add-cart-btn-installment {
-  padding: 12px 80px;
+  padding: 12px 76px;
   background-color: #ffffff;
   outline: none;
   border: 1px solid #e1e2e3;
   border-radius: 50px;
   color: black;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
 }
@@ -73,6 +74,9 @@ button.Add-cart-btn-order {
   text-align: center;
 }
 
+.btn-center{
+  text-align: center;
+}
 .col.l-6.Add-cart-btn-price-text-custom {
   font-size: 20px;
   color: #d53b2a;
@@ -80,7 +84,7 @@ button.Add-cart-btn-order {
 }
 
 .Cart_container{
-  margin-top: 72px;
+  padding-top: 72px;
   margin-bottom: 36px;
 }
 .img-not-cart-empty img{
@@ -91,12 +95,14 @@ button.Add-cart-btn-order {
   margin: 52px auto 0 auto;
 }
 .Container-img-not-cart-empty{
-  width: 100%;
+  width: 50%;
   margin: 0 auto;
 }
 .text-not-cart-empty{
   text-align: center;
   margin: 14px 0px;
+  font-weight: 600;
+  font-size: 18px;
 }
 button.btnChangequantityCart {
   padding: 7px;
@@ -144,7 +150,7 @@ visibility: visible;
   color: blue;
 }
 .text_Modal_cart {
-  font-size: 20px;
+  font-size: 15px;
   margin: 22px 0;
 }
 .btn_Modal_cart{
@@ -154,7 +160,7 @@ visibility: visible;
 
 .btn-item-option{
   padding: 8px 26px;
-  font-size: 16px;
+  font-size: 12px;
   margin: 0 6px;
   cursor: pointer;
   border-radius: 3px;

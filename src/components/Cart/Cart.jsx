@@ -45,7 +45,7 @@ console.log(cart.cartItem.length)
 <div className="Cart_container">
 <div className="grid wide">
   <div className="row mt-50">
-    <div className="col l-1 dis-padding">
+    <div className="col l-1 dis-padding ">
       <div className=" Size-logo">
         <img src="./image/logosmall.svg" alt="" /> 
       </div>
@@ -55,7 +55,7 @@ console.log(cart.cartItem.length)
   <div className="col l-12 Content-2-container-reduce-price"><h1>Giỏ hàng ({showSumProduct(cart)})</h1></div>
   <div className="row no-gutters">
     <div className="col l-9 m-12 c-12">
-    { cart.cartItem.length > 0 ?
+    { cart.cartItem.length > 0 &&
      cart.cartItem.map((item, index) =>{
        return <CartItem
        key={index}
@@ -73,13 +73,20 @@ console.log(cart.cartItem.length)
        ></CartItem>
 
       })
-      :
-           <div className='Container-img-not-cart-empty'>
-            <img className="img-not-cart-empty" src="../../image/cart-empty.png" alt="" />
-            <div className="text-not-cart-empty">Không có sản phẩm trong giỏ hàng !</div>
-            </div>
+     
     }  
     </div>
+
+{
+  cart.cartItem.length ===0 && 
+          <div className=' col l-12 m-12 c-12'>
+            <div className='Container-img-not-cart-empty '>
+              <img className="img-not-cart-empty" src="../../image/cart-empty.png" alt="" />
+            <div className="text-not-cart-empty">Không có sản phẩm trong giỏ hàng !</div>
+            </div>
+            
+        </div>
+}
 
  { cart.cartItem.length >0 &&<CartResult
   TotalInCart={cart.cartItem}
@@ -87,8 +94,11 @@ console.log(cart.cartItem.length)
 }
     
 { cart.cartItem.length ==0 &&
-<div >
-  <div className='btn-center'><NavLink to="/" ><button className="Add-cart-btn-order">Tiếp tục mua hàng</button></NavLink>  </div>
+<div className='col l-12 m-12 c-12 '>
+  <div className='btn-center'><NavLink to="/" >
+   <button className="Add-cart-btn-order">Tiếp tục mua hàng</button>
+ </NavLink>  
+ </div>
 
 </div>
 }

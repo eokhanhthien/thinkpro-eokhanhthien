@@ -1,9 +1,10 @@
 import React from "react";
+import Shimmer from "./Shimmer";
 import SkeletonsElement from "./SkeletonsElement";
 
 function SkeletonArticle(props) {
   return (
-    <div className="col l-12 Content-2-container-product-col-12">
+    <div className="col l-12 Content-2-container-product-col-12 animation-shimmer">
     <div className="row no-gutters">
       <div className="col l-3">
 
@@ -30,6 +31,7 @@ function SkeletonArticle(props) {
         <div className="Content-2-container-product-item-gift"><SkeletonsElement type="text-50"></SkeletonsElement></div>
       </div>
     </div>
+    <Shimmer></Shimmer>
   </div>
   );
 }

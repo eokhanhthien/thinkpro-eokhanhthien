@@ -211,7 +211,7 @@ function Home(props) {
           <div className="col l-10 c-10 m-10">
             <Swiper
               slidesPerView={8}
-              navigation={true}
+              // navigation={true}
               breakpoints={{
                 0: {
                   slidesPerView: 4,
@@ -270,22 +270,22 @@ function Home(props) {
             Khoảng giá
           </div>
           <div className="col l-1-71 m-1-71 c-1-71 ">
-            <div className="khoanggia"> Trên 50 triệu</div>
+            <div className="khoanggia-option"> Trên 50 triệu</div>
           </div>
           <div className="col l-1-71 m-1-71 c-1-71 ">
-            <div className="khoanggia"> 30 - 40 triệu</div>
+            <div className="khoanggia-option"> 30 - 40 triệu</div>
           </div>
           <div className="col l-1-71 m-1-71 c-1-71 ">
-            <div className="khoanggia"> 20 - 30 triệu</div>
+            <div className="khoanggia-option"> 20 - 30 triệu</div>
           </div>
           <div className="col l-1-71 m-1-71 c-1-71 ">
-            <div className="khoanggia"> 15 - 20 triệu</div>
+            <div className="khoanggia-option"> 15 - 20 triệu</div>
           </div>
           <div className="col l-1-71 m-1-71 c-1-71 ">
-            <div className="khoanggia"> 10 - 15 triệu</div>
+            <div className="khoanggia-option"> 10 - 15 triệu</div>
           </div>
           <div className="col l-1-71 m-1-71 c-1-71 ">
-            <div className="khoanggia"> Dưới 10 triệu</div>
+            <div className="khoanggia-option"> Dưới 10 triệu</div>
           </div>
 
 
@@ -354,7 +354,7 @@ function Home(props) {
           <div className="col l-10 c-10 m-10">
             <Swiper
               slidesPerView={8}
-              navigation={true}
+              // navigation={true}
               breakpoints={{
                 0: {
                   slidesPerView: 4,
@@ -413,22 +413,22 @@ function Home(props) {
             Khoảng giá
           </div>
           <div className="col l-1-71 m-1-71 c-1-71 ">
-            <div className="khoanggia"> Trên 50 triệu</div>
+            <div className="khoanggia-option"> Trên 50 triệu</div>
           </div>
           <div className="col l-1-71 m-1-71 c-1-71 ">
-            <div className="khoanggia"> 30 - 40 triệu</div>
+            <div className="khoanggia-option"> 30 - 40 triệu</div>
           </div>
           <div className="col l-1-71 m-1-71 c-1-71 ">
-            <div className="khoanggia"> 20 - 30 triệu</div>
+            <div className="khoanggia-option"> 20 - 30 triệu</div>
           </div>
           <div className="col l-1-71 m-1-71 c-1-71 ">
-            <div className="khoanggia"> 15 - 20 triệu</div>
+            <div className="khoanggia-option"> 15 - 20 triệu</div>
           </div>
           <div className="col l-1-71 m-1-71 c-1-71 ">
-            <div className="khoanggia"> 10 - 15 triệu</div>
+            <div className="khoanggia-option"> 10 - 15 triệu</div>
           </div>
           <div className="col l-1-71 m-1-71 c-1-71 ">
-            <div className="khoanggia"> Dưới 10 triệu</div>
+            <div className="khoanggia-option"> Dưới 10 triệu</div>
           </div>
   
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import "./PageAllLaptop.css"
 import postApi from '../../api/postApi';
-import ProductItemColor from '../ProductItemColor/ProductItemColor';
+import { currencyFormat } from "../Functional/FormatNumber";
 import ProductItemColorAllLaptop from "../ProductItemColorAllLaptop/ProductItemColorAllLaptop"
 import SkeletonPageAllLapCol12 from '../Functional/Skeletons/SkeletonPageAllLapCol12';
 import SkeletonArticle1 from '../Functional/Skeletons/SkeletonArticle1';
@@ -154,8 +154,41 @@ function parseToParams(filter) {
       }
     }
 
+
+    function handleRemoveFilter(value) {
+      if(value==="name"){
+        setFilters({
+          ...filters,
+          name_like:'',
+        })
+      }
+      if(value==="price"){
+        setFilters({
+          ...filters,
+          cur_price_gte:'',
+          cur_price_lte:'',
+        })
+      }
+      if(value==="all"){
+        setFilters({
+          ...filters,
+          name_like:'',
+          cur_price_gte:'',
+          cur_price_lte:'',
+        })
+
+        var checkbox_option_item=document.querySelectorAll(".checkbox_option_item")
+        var checkbox_option_item_price=document.querySelectorAll(".checkbox_option_item_price")
+       
+            for(let n=0;n<checkbox_option_item.length;n++){
+              checkbox_option_item[n].checked = false
+              checkbox_option_item_price[n].checked = false
+        }
+
+      }
+      }
     
-// console.log(FilterLaptop);
+// console.log(filters.name_like);
 
     return (
         <div className="Detail-container grid wide">
@@ -191,6 +224,13 @@ function parseToParams(filter) {
           <div className="col l-2 c-12 m-12">
             <div className="PageAllLap-Filter-Container">
               <div className="PageAllLap-Filter">Bộ lọc được áp dụng</div>
+              <div className='no-filter' onClick={()=> handleRemoveFilter("all")} >Bỏ lọc</div>
+              <div className="row no-gutters"> 
+              
+             {filters.name_like && <div> <span className='filter-tag'>{filters.name_like}</span>  <i onClick={()=> handleRemoveFilter("name")}  class="fas fa-times filter-tag-icon"></i></div>}
+             {filters.cur_price_gte && <div> <span className='filter-tag'>{currencyFormat(parseInt(filters.cur_price_gte))} - {currencyFormat(parseInt(filters.cur_price_lte))}</span>  <i onClick={()=> handleRemoveFilter("price")} class="fas fa-times filter-tag-icon"></i></div>}
+              </div>
+              
               <div className="Option-checkbox-container">
                 <div className="PageAllLap-Filter">
                   <div className="PageAllLap-Filter-title">Thương hiệu <i className="fas fa-plus" /> </div>
@@ -218,6 +258,21 @@ function parseToParams(filter) {
                 </div>
               </div> 
             </div>
+
+        <div className="PageAllLap-Filter-Container-mobile">
+          <div className="row">
+            <div className="col l-4 m-4 c-4 sort-price-title">Sắp xếp theo</div>
+            <div className="col l-4 m-4 c-4 sort-price-mobile">
+            <select name="" id="">
+              <option value="default">Không sắp xếp</option>
+              <option value="asc">Giá tăng dần</option>
+              <option value="desc">Giá giảm dần</option>
+          </select>
+            </div>
+            <div className="col l-2 m-2 c-o-1 sort-filter-mobile"> <i class="fas fa-filter"></i> Lọc </div>
+        </div>
+        </div>
+
           </div>
           <div className="col l-10">
          { isList === true &&  <div className="row ">
@@ -283,7 +338,7 @@ function parseToParams(filter) {
               })}
               
               {
-              FilterLaptop.length == 0 && 
+              FilterLaptop.length === 0 && isLoading &&
               <div className='jtf-content col l-12 m-12 c-12'>
                 <img src="../../image/no_product.png" alt="" />
               </div>

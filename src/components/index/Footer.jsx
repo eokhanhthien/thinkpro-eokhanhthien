@@ -5,8 +5,8 @@ function Footer(props) {
     <div className="Footer">
       <div className="grid wide">
         <div className="row">
-          <div className="col l-3">
-            <div>
+          <div className="col l-3 m-6 c-6">
+            <div className="logo-footer">
               <img src="../image/logo2.svg" alt="" />
             </div>
           </div>

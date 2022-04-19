@@ -1,9 +1,10 @@
 import React from 'react';
+import Shimmer from './Shimmer';
 import SkeletonsElement from "./SkeletonsElement";
 
 function SkeletonArticleDetail(props) {
     return (
-        <div> <div className="Detail-container grid wide">
+        <div className='animation-shimmer'> <div className="Detail-container grid wide">
         <div className="row mt-50">
           <div className="col l-1 dis-padding">
             <div className=" Size-logo">
@@ -144,6 +145,7 @@ function SkeletonArticleDetail(props) {
 
 
       </div>
+      <Shimmer></Shimmer>
 </div>
     );
 }

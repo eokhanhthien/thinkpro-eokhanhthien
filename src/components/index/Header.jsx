@@ -184,7 +184,10 @@ function handleLogout() {
                 <i className="far fa-bell position-right-option-icon" /> 
             </NavLink>
 
-              
+            <div className="icon-header-option-mobile border-search">
+            <i class="fas fa-search position-right-option-icon "></i>
+            </div>
+
               <NavLink to="/Cart" className="icon-header-option-add-cart ">
                 <i className="fal fa-cart-plus position-right-option-icon icon_news" />
                 {showSumProduct(cart)>0 && <div className="Number_product_cart">{showSumProduct(cart)}</div>}
@@ -227,6 +230,10 @@ function handleLogout() {
                   
                 </div>
               </NavLink>
+
+              <div className="icon-header-option-mobile ">
+                <i class="fas fa-bars position-right-option-icon"></i>
+              </div>
 
              {user.userInfo._delegate ? <div className="icon-header-option">
              <i className="far fa-user-circle position-right-option-icon" />

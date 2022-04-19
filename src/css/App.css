@@ -290,6 +290,21 @@ button.Cart-btn-add-products {
   cursor: pointer;
   position: relative;
 }
+
+.icon-header-option-mobile {
+  height: 48px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  line-height: 54px;
+  border-radius: 50px;
+  background-color: rgb(255, 255, 255);
+  margin: 0 16px;
+  cursor: pointer;
+  position: relative;
+  display: none;
+}
+
 .icon-header-option:hover .User_login{
   opacity: 1;
   visibility: visible;
@@ -487,7 +502,6 @@ img.Content-img {
 }
 
 .Content-2-container-product-item div {
-  margin-bottom: 4px;
   overflow: hidden;
   color: #4e4e4f;
   padding: 10px;
@@ -506,7 +520,7 @@ img.Content-img {
   font-size: 18px;
   color: #d74636 !important;
   font-weight: 600;
-  margin-top: 10px;
+
 }
 
 .Content-3-container {
@@ -542,18 +556,18 @@ img.Content-img {
 .Content-2-container-product-info-detail {
   display: block;
   position: absolute;
-  left: 0;
+  left: -1px;
   bottom: -44%;
   text-align: center;
   border: 1px solid rgb(226, 226, 225);
   padding-bottom: 30px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-shadow: rgb(0 0 0 / 16%) 0px 46px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
   display: none;
   background-color: white;
   padding-left: 0 !important;
   padding-right: 0 !important;
   padding-top: 0 !important;
+  width: 244.8px;
 }
 
 .Content-2-container-product-info-detail-item {
@@ -589,6 +603,7 @@ button.add-compare {
 .Content-2-container-reduce-price {
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 0;
 }
 
 .add-view-all {
@@ -651,6 +666,14 @@ img.logo-thuonghieu:hover{
   background-color: #f3f5f8;
 }
 
+.khoanggia-option {
+  line-height: 36px;
+  border: 1px solid #f3f5f8;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #f3f5f8;
+}
+
 .khoanggia:hover {
   background-color: #6ec8dd;
   cursor: pointer;
@@ -672,7 +695,6 @@ img.logo-thuonghieu:hover{
 .Footer-Hotline {
   color: white;
   font-size: 18px;
-  margin-top: 32px;
   text-align: end;
 }
 .Footer-icon {
@@ -812,4 +834,45 @@ i.fas.fa-angle-right.custom_icon_right {
 .jtf-content{
 text-align: center;
 
+}
+.jtf-content img{
+  width: 100%;
+}
+.logo-footer img{
+ width: 100%;
+}
+
+.fa-search:before,
+.fa-cart-plus:before {
+  font-weight: 400;
+  font-size: 20px;
+}
+.fa-bars:before {
+  font-size: 20px;
+}
+.border-search{
+  border: 1px solid rgb(226, 226, 224);
+}
+.PageAllLap-Filter-Container-mobile{
+  display: none;
+  margin-bottom: 16px;
+}
+.sort-price-mobile select{
+  outline: none;
+  border: none;
+}
+
+.sort-price-mobile{
+  line-height: 32px;
+}
+.sort-price-title{
+  font-weight: 600;
+  line-height: 32px;
+}
+.sort-filter-mobile {
+  border: 1px solid rgb(226, 225, 225);
+  border-radius: 50px;
+  padding: 7px 12px;
+  font-size: 17px;
+  color: #2d2e2e;
 }
