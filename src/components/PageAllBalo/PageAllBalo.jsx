@@ -221,7 +221,7 @@ function parseToParams(filter) {
               <img src="../../image/logosmall.svg" alt="" /> 
             </div>
           </div>
-          <div className="col l-1"><span>/ Laptop</span></div>
+          <div className="col l-1"><span>/ Balo</span></div>
           <div className="col l-12 m-12 c-12 Content-2-container-reduce-price"><h1>Balo</h1></div>
         </div>
         <div className="row PageAllLap-justify-content">

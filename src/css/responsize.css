@@ -975,6 +975,9 @@
 .size-img-thumbnail-swiper{
   width: 84px !important;
 }
+.Content-right-item {
+  height: 65px !important; 
+}
 }
 /*Iphone(480 x 640)*/
 @media screen and (max-width: 320px){

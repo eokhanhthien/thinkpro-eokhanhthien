@@ -19,6 +19,7 @@ import 'firebase/compat/auth';
 function Header(props) {
   const [ScrollDown, setScrollDown] = useState(false);
   const [isLoading, SetisLoading] = useState(false);
+  const [isOpenHeaderNavbar, SetisOpenHeaderNavbar] = useState(false);
 
   const [searchTerm, setSearchTerm] = useState('');
   const typingTimeoutRef = useRef(null)
@@ -119,6 +120,10 @@ const user = useSelector(state => state.users)
 function handleLogout() {
   firebase.auth().signOut();
   window.location.reload();
+}
+
+function handleOpenHeaderNavbar(value) {
+  SetisOpenHeaderNavbar(value)
 }
   return (
     <div className={ScrollDown ? "Header Header-down" : "Header Header-up"}>
@@ -231,7 +236,7 @@ function handleLogout() {
                 </div>
               </NavLink>
 
-              <div className="icon-header-option-mobile ">
+              <div onClick={()=>handleOpenHeaderNavbar(true)} className="icon-header-option-mobile ">
                 <i class="fas fa-bars position-right-option-icon"></i>
               </div>
 
@@ -290,6 +295,28 @@ function handleLogout() {
           </div>
         </div>
       </div>
+      <div className={isOpenHeaderNavbar ? "Header-mobile-navbar Header-mobile-navbar-active":"Header-mobile-navbar"}>
+      <div className="Header-mobile-navbar-container">
+        <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/"><i class="fas fa-home-lg-alt"></i> Trang chủ </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
+        <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/PageAllLaptop"><i class="fas fa-laptop"></i> Laptop </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
+        <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/PageAllPC"><i class="fas fa-desktop"></i> PC </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
+        <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/PageAllAccessory"><i class="fas fa-keyboard"></i> Bàn phím </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
+        <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/PageAllMouse"><i class="fas fa-mouse"></i> Chuột </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
+        <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/PageAllBalo"><i class="fas fa-backpack"></i> Balo </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
+      </div>
+      <div className="Header-mobile-navbar-container">
+      <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/Login">Đăng nhập </NavLink></div>
+      <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/Registration">Đăng ký </NavLink></div>
+      <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/PageNews"><i class="fas fa-newspaper"></i> Tin tức </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
+      </div>
+
+      <div className="Header-mobile-navbar-Hotline">
+      <div class="Detail-sticky-hotline">Hotline</div>
+      <div class="Detail-sticky-hotline-number">1900.63.3579</div>
+      </div>
+      </div>
+      <div onClick={()=>handleOpenHeaderNavbar(false)} className={isOpenHeaderNavbar ?"overlay overlay-active":"overlay"}></div>
+
     </div>
   );
 }
