@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import "./PageAllAccessory.css"
 import postApi from '../../api/postApi';
 import { currencyFormat } from "../Functional/FormatNumber";
 import ProductItemColorAllLaptop from "../ProductItemColorAllLaptop/ProductItemColorAllLaptop"
@@ -11,7 +10,7 @@ import Pagination from '../Functional/Pagination/Pagination';
 import queryString from "query-string"
 import ProductItemColorAllLaptopCol12 from '../ProductItemColorAllLaptop/ProductItemColorAllLaptopCol12';
 
-function PageAllAccessory(props) {
+function PageAllBalo(props) {
     const [isLoading, SetisLoading] = useState(false);
     const [FilterLaptop, SetFilterLaptop] = useState([]);
     const [totalLaptop, SettotalLaptop] = useState(267);
@@ -51,7 +50,7 @@ function PageAllAccessory(props) {
 
             // console.log(paramsString);
             let dbLaptop = await postApi.getAll(`/filters?${paramsString}`, {
-              category_id: 7,
+              category_id: 9,
             })
             SetFilterLaptop(dbLaptop.data)
             setPagination({
@@ -223,7 +222,7 @@ function parseToParams(filter) {
             </div>
           </div>
           <div className="col l-1"><span>/ Laptop</span></div>
-          <div className="col l-12 m-12 c-12 Content-2-container-reduce-price"><h1>Bàn phím</h1></div>
+          <div className="col l-12 m-12 c-12 Content-2-container-reduce-price"><h1>Balo</h1></div>
         </div>
         <div className="row PageAllLap-justify-content">
           <div className="col l-2">
@@ -259,19 +258,13 @@ function parseToParams(filter) {
                 <div className="PageAllLap-Filter">
                   <div className="PageAllLap-Filter-title">Thương hiệu <i className="fas fa-plus" /> </div>
                   <div className="Option-checkbox">
-                  <div className="Cutom-text-option-container"><input value="Keychron" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Keychron</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Filco" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Filco</span> </div>
-                    <div className="Cutom-text-option-container"><input value="E-Dra" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">E-Dra</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Logitech" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Logitech</span> </div>
-                    <div className="Cutom-text-option-container"><input value="DAREU"  type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">DAREU</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Akko"  type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Akko</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Microsoft" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Microsoft</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Newmen" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Newmen</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Keydous" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Keydous</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Mistel" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Mistel</span> </div>
-                    <div className="Cutom-text-option-container"><input value="FL-ESPORT" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">FL-ESPORT</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Leopold" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Leopold</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Apple" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Apple</span> </div>
+                  <div className="Cutom-text-option-container"><input value="ReeYee" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">ReeYee</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Alienware" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Alienware</span> </div>
+                    <div className="Cutom-text-option-container"><input value="MSI" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">MSI</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Lenovo" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Lenovo</span> </div>
+                    <div className="Cutom-text-option-container"><input value="PKG"  type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">PKG</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Unisex"  type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Unisex</span> </div>
+                   
                   </div>
                   <div className="PageAllLap-Filter-title">Khoảng giá <i className="fas fa-plus" /> </div>
                   <div className="Option-checkbox">
@@ -403,19 +396,12 @@ function parseToParams(filter) {
                 <div  className="PageAllLap-Filter">
                   <div className="PageAllLap-Filter-title">Thương hiệu <i className="fas fa-plus" /> </div>
                   <div className="Option-checkbox">
-                  <div className="Cutom-text-option-container"><input value="Keychron" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Keychron</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Filco" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Filco</span> </div>
-                    <div className="Cutom-text-option-container"><input value="E-Dra" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">E-Dra</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Logitech" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Logitech</span> </div>
-                    <div className="Cutom-text-option-container"><input value="DAREU"  type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">DAREU</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Akko"  type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Akko</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Microsoft" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Microsoft</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Newmen" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Newmen</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Keydous" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Keydous</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Mistel" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Mistel</span> </div>
-                    <div className="Cutom-text-option-container"><input value="FL-ESPORT" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">FL-ESPORT</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Leopold" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Leopold</span> </div>
-                    <div className="Cutom-text-option-container"><input value="Apple" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Apple</span> </div>
+                  <div className="Cutom-text-option-container"><input value="ReeYee" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">ReeYee</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Alienware" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Alienware</span> </div>
+                    <div className="Cutom-text-option-container"><input value="MSI" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">MSI</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Lenovo" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Lenovo</span> </div>
+                    <div className="Cutom-text-option-container"><input value="PKG"  type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">PKG</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Unisex"  type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Unisex</span> </div>
                   </div>
                   <div className="PageAllLap-Filter-title">Khoảng giá <i className="fas fa-plus" /> </div>
                   <div className="Option-checkbox">
@@ -438,4 +424,4 @@ function parseToParams(filter) {
     );
 }
 
-export default PageAllAccessory;
+export default PageAllBalo;

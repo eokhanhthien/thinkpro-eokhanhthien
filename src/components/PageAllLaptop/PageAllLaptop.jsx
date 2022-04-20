@@ -15,6 +15,7 @@ function PageAllLaptop(props) {
     const [isLoading, SetisLoading] = useState(false);
     const [FilterLaptop, SetFilterLaptop] = useState([]);
     const [totalLaptop, SettotalLaptop] = useState(267);
+    const [isnavBarFilter, SetisnavBarFilter] = useState(false);
 
     const [isList, SetIsList] = useState(false);
     const [isDESC, SetisDESC] = useState(0);
@@ -44,6 +45,7 @@ function PageAllLaptop(props) {
     window.scrollTo(0, 0)
     useEffect(() => {
         (async function () {
+             SetisLoading(false);
             // const paramsString = queryString.stringify(filters)
             const paramsString = parseToParams(filters)
 
@@ -156,11 +158,17 @@ function parseToParams(filter) {
 
 
     function handleRemoveFilter(value) {
+         var checkbox_option_item=document.querySelectorAll(".checkbox_option_item")
+        var checkbox_option_item_price=document.querySelectorAll(".checkbox_option_item_price")
       if(value==="name"){
         setFilters({
           ...filters,
           name_like:'',
         })
+        for(let n=0;n<checkbox_option_item.length;n++){
+          checkbox_option_item[n].checked = false
+    }
+
       }
       if(value==="price"){
         setFilters({
@@ -168,6 +176,9 @@ function parseToParams(filter) {
           cur_price_gte:'',
           cur_price_lte:'',
         })
+        for(let n=0;n<checkbox_option_item.length;n++){
+          checkbox_option_item_price[n].checked = false
+    }
       }
       if(value==="all"){
         setFilters({
@@ -177,9 +188,6 @@ function parseToParams(filter) {
           cur_price_lte:'',
         })
 
-        var checkbox_option_item=document.querySelectorAll(".checkbox_option_item")
-        var checkbox_option_item_price=document.querySelectorAll(".checkbox_option_item_price")
-       
             for(let n=0;n<checkbox_option_item.length;n++){
               checkbox_option_item[n].checked = false
               checkbox_option_item_price[n].checked = false
@@ -188,6 +196,25 @@ function parseToParams(filter) {
       }
       }
     
+      function handleSelectFillter(e) {
+        console.log(e.target.value)
+        if(e.target.value === ""){
+        handleSortPrice("","")
+        }
+        else{
+        handleSortPrice("cur_price",e.target.value)
+        }
+      }
+
+      function handleOpenFilterNavbar(value) {
+        SetisnavBarFilter(value)
+        // console.log(isnavBarFilter)
+      }
+
+    //  function handleBackFillter(value) {
+    //   SetisnavBarFilter(value)
+    //   handleRemoveFilter("all")
+    //  }
 // console.log(filters.name_like);
 
     return (
@@ -199,7 +226,7 @@ function parseToParams(filter) {
             </div>
           </div>
           <div className="col l-1"><span>/ Laptop</span></div>
-          <div className="col l-12 Content-2-container-reduce-price"><h1>Máy tính xách tay</h1></div>
+          <div className="col l-12 m-12 c-12 Content-2-container-reduce-price"><h1>Máy tính xách tay</h1></div>
         </div>
         <div className="row PageAllLap-justify-content">
           <div className="col l-2">
@@ -225,11 +252,11 @@ function parseToParams(filter) {
             <div className="PageAllLap-Filter-Container">
               <div className="PageAllLap-Filter">Bộ lọc được áp dụng</div>
               <div className='no-filter' onClick={()=> handleRemoveFilter("all")} >Bỏ lọc</div>
-              <div className="row no-gutters"> 
+              
               
              {filters.name_like && <div> <span className='filter-tag'>{filters.name_like}</span>  <i onClick={()=> handleRemoveFilter("name")}  class="fas fa-times filter-tag-icon"></i></div>}
              {filters.cur_price_gte && <div> <span className='filter-tag'>{currencyFormat(parseInt(filters.cur_price_gte))} - {currencyFormat(parseInt(filters.cur_price_lte))}</span>  <i onClick={()=> handleRemoveFilter("price")} class="fas fa-times filter-tag-icon"></i></div>}
-              </div>
+              
               
               <div className="Option-checkbox-container">
                 <div className="PageAllLap-Filter">
@@ -263,13 +290,13 @@ function parseToParams(filter) {
           <div className="row">
             <div className="col l-4 m-4 c-4 sort-price-title">Sắp xếp theo</div>
             <div className="col l-4 m-4 c-4 sort-price-mobile">
-            <select name="" id="">
-              <option value="default">Không sắp xếp</option>
+            <select onChange={handleSelectFillter} name="" id="">
+              <option value=''>Không sắp xếp</option>
               <option value="asc">Giá tăng dần</option>
               <option value="desc">Giá giảm dần</option>
           </select>
             </div>
-            <div className="col l-2 m-2 c-o-1 sort-filter-mobile"> <i class="fas fa-filter"></i> Lọc </div>
+            <div onClick={()=>handleOpenFilterNavbar(true)} className="col l-2 m-2 c-o-1 sort-filter-mobile"> <i class="fas fa-filter"></i> Lọc </div>
         </div>
         </div>
 
@@ -354,6 +381,51 @@ function parseToParams(filter) {
 }
           </div>
         </div>
+        <div className={isnavBarFilter ? "filter-mobile-navbar filter-mobile-navbar-avtive" : "filter-mobile-navbar"}>
+           <div className="header-navbar-mobile">
+            <div className="row header-navbar-mobile-row ">
+              <div onClick={()=>handleOpenFilterNavbar(false)} className="col l-4 m-4 c-4"><i class="fas fa-angle-left icon-back"></i></div>
+              <div className="col l-4 m-4 c-4 tag-filter"><p>Lọc</p> </div>
+              <div onClick={()=>handleOpenFilterNavbar(false)} className="col l-4 m-4 c-4 tag-filter-apply"><p className=''> <span className='apply-filter-navbar'> Áp dụng</span></p></div>
+            </div>
+          </div>
+        <div className="PageAllLap-Filter-Container-navbar">
+         
+              <div className="PageAllLap-Filter">Bộ lọc được áp dụng</div> 
+             
+              <div className='no-filter' onClick={()=> handleRemoveFilter("all")} >Bỏ lọc</div>
+
+              {filters.name_like && <div> <span className='filter-tag'>{filters.name_like}</span>  <i onClick={()=> handleRemoveFilter("name")}  class="fas fa-times filter-tag-icon"></i></div>}
+              {filters.cur_price_gte && <div> <span className='filter-tag'>{currencyFormat(parseInt(filters.cur_price_gte))} - {currencyFormat(parseInt(filters.cur_price_lte))}</span>  <i onClick={()=> handleRemoveFilter("price")} class="fas fa-times filter-tag-icon"></i></div>}
+            
+                <div  className="PageAllLap-Filter">
+                  <div className="PageAllLap-Filter-title">Thương hiệu <i className="fas fa-plus" /> </div>
+                  <div className="Option-checkbox">
+                    <div className="Cutom-text-option-container"><input value="Lenovo" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Lenovo</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Razer" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Razer</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Acer" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Acer</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Dell" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Dell</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Asus"  type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Asus</span> </div>
+                    <div className="Cutom-text-option-container"><input value="HP"  type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">HP</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Microsoft" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Microsoft</span> </div>
+                    <div className="Cutom-text-option-container"><input value="Apple" type="checkbox" className='checkbox_option_item'/><span className="Cutom-text-option-checkbox">Apple</span> </div>
+                  </div>
+                  <div className="PageAllLap-Filter-title">Khoảng giá <i className="fas fa-plus" /> </div>
+                  <div className="Option-checkbox">
+                    <div className="Cutom-text-option-container"><input value="50000000" data-valuetwo=""type="checkbox" className='checkbox_option_item_price'/><span className="Cutom-text-option-checkbox">Trên 50 triệu</span> </div>
+                    <div className="Cutom-text-option-container"><input value="40000000" data-valuetwo="50000000"type="checkbox" className='checkbox_option_item_price'/><span className="Cutom-text-option-checkbox">40 - 50 triệu</span> </div>
+                    <div className="Cutom-text-option-container"><input value="30000000" data-valuetwo="40000000"type="checkbox" className='checkbox_option_item_price'/><span className="Cutom-text-option-checkbox">30 - 40 triệu</span> </div>
+                    <div className="Cutom-text-option-container"><input value="20000000" data-valuetwo="30000000"type="checkbox" className='checkbox_option_item_price'/><span className="Cutom-text-option-checkbox">20 - 30 triệu</span> </div>
+                    <div className="Cutom-text-option-container"><input value="15000000" data-valuetwo="20000000"type="checkbox" className='checkbox_option_item_price'/><span className="Cutom-text-option-checkbox">15 - 20 triệu</span> </div>
+                    <div className="Cutom-text-option-container"><input value="10000000" data-valuetwo="15000000"type="checkbox" className='checkbox_option_item_price'/><span className="Cutom-text-option-checkbox">10 - 15 triệu</span> </div>
+                    <div className="Cutom-text-option-container"><input value="0" data-valuetwo="10000000"type="checkbox" className='checkbox_option_item_price'/><span className="Cutom-text-option-checkbox">Dưới 10 triệu</span> </div>
+                  </div>
+                
+                </div>
+          
+            </div>
+        </div>
+        
       </div>
       
     );

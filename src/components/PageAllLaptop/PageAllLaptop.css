@@ -77,7 +77,7 @@
 }
 
 .Option-checkbox-container{
-    overflow: auto;
+    /* overflow: auto; */
     height: 600px;
 }
 
@@ -108,4 +108,59 @@
     font-size: 14px;
     margin-bottom: 10px;
     cursor: pointer;
+}
+
+.filter-mobile-navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    padding: 0px 16px;
+    transition: .3s;
+     transform: translateX(-100%);
+    z-index: 100;
+    overflow: scroll;
+    padding: 0px 16px
+}
+.filter-mobile-navbar-avtive{
+    transform: translateX(0);
+}
+
+span.apply-filter-navbar {
+    line-height: 51px;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 50px;
+    color: white;
+    background-color: #06c1d5;
+}
+
+
+
+.tag-filter{
+    text-align: center;
+}
+.tag-filter p{
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+}
+.tag-filter-apply{
+    text-align: end;
+}
+.header-navbar-mobile{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    width: 100%; 
+    line-height: 60px;
+    border-bottom: 1px solid #d3d3cc;
+}
+.icon-back {
+    font-size: 20px;
+    line-height: 60px;
 }

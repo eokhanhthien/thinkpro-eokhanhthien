@@ -73,7 +73,7 @@
 }
 
 .Option-checkbox-container{
-    overflow: auto;
+    /* overflow: auto; */
     height: 600px;
 }
 

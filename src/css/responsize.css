@@ -972,6 +972,9 @@
 .Content-2-container-product-item {
   height: 420px !important;
 }
+.size-img-thumbnail-swiper{
+  width: 84px !important;
+}
 }
 /*Iphone(480 x 640)*/
 @media screen and (max-width: 320px){

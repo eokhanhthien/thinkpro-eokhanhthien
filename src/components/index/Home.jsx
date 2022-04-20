@@ -40,6 +40,7 @@ function Home(props) {
   const [ProductPC, SetProductPC] = useState([]);
   const [ProductAccessory, SetProductAccessory] = useState([]);
   const [ProductMouse, SetProductProductMouse] = useState([]);
+  const [Balo, SetBalo] = useState([]);
 
   useEffect(() => {
     (async function () {
@@ -73,12 +74,19 @@ function Home(props) {
         _limit: 10,
       });
 
+      let dbBalo = await postApi.getAll("/filters", {
+        category_id: 9,
+        _start: 0,
+        _limit: 5,
+      });
+
       SetProductLaptop(dbLaptop.data);
       SetProductLaptopMore(dbLaptopmore.data);
       SetProductPC(dbPC.data);
       SetProductAccessory(dbAccessory.data);
       SetProductProductMouse(dbMouse.data)
-      if (dbLaptop && dbLaptopmore && dbPC && dbAccessory&&dbMouse) {
+      SetBalo(dbBalo.data)
+      if (dbLaptop && dbLaptopmore && dbPC && dbAccessory&&dbMouse&&dbBalo) {
         SetisLoading(true);
       }
     })();
@@ -87,7 +95,7 @@ function Home(props) {
 
   // const datastore = useSelector(state => state.carts)
 
-  // console.log(datastore);
+  // console.log(Balo);
 
   return (
     <div className="Content-container">
@@ -484,6 +492,39 @@ function Home(props) {
           <NavLink to="/PageAllAccessory"> <button className="add-view-all">Xem tất cả</button></NavLink>
           </div>
         </div>
+
+
+        <div className="row Content-2-container">
+          <div className="col l-12 m-12 c-12 Content-2-container-reduce-price">
+            <h1>Balo</h1>
+          </div>
+
+          {isLoading
+            ? Balo.map((item, index) => {
+                return (
+                  <ProductItemColor
+                    id={item.id}
+                    key={index}
+                    name={item.name}
+                    thumbnail={item.thumbnail}
+                    cur_price={item.cur_price}
+                    tang_type={item.tang_type}
+                    cur_sku={item.cur_sku}
+                    shared_url={item.shared_url}
+                    options={item.options}
+                  ></ProductItemColor>
+                );
+              })
+            : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => {
+                return <SkeletonArticle key={index}></SkeletonArticle>;
+              })}
+
+          <div className="col l-12 m-12 c-12 Content-2-container-view-all">
+          <NavLink to="/PageAllBalo"> <button className="add-view-all">Xem tất cả</button></NavLink>
+          </div>
+        </div>
+
+
       </div>
     </div>
   );

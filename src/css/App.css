@@ -158,7 +158,7 @@ button.Cart-btn-add-products {
 }
 
 .mt-15 {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .mt-50 {
@@ -367,7 +367,7 @@ font-size: 13px;
   position: absolute;
   text-align: center;
   line-height: 26px;
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 50px;
   right: 0;
   top: -4px;
@@ -436,7 +436,7 @@ img.Content-img {
 .Content-right-item a {
   text-decoration: none;
   color: black;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .col.l-12.Content-right-item {
@@ -640,7 +640,7 @@ button.add-compare {
 
 
 img.logo-thuonghieu {
-  margin:  0 5px;
+  margin:  0 3px;
   border: 1px solid #c7c6c6;
   border-radius: 8px;
   width: 100%;
