@@ -106,7 +106,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .Cart-hover-list-size-img img {
-  width: 100%;
+  width: 80%;
 }
 
 span.Number-products {
@@ -124,6 +124,17 @@ span.Number-products {
 
 button.Cart-btn-add-products {
   padding: 10px;
+  width: 50%;
+  color: white;
+  background-color: #06c1d4;
+  border: 1px solid #06c1d4;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.Cart-btn-add-products-total {
+  padding: 10px;
   width: 100%;
   color: white;
   background-color: #06c1d4;
@@ -132,6 +143,7 @@ button.Cart-btn-add-products {
   font-weight: 600;
   cursor: pointer;
 }
+
 
 .Size-logo {
   height: 20px;
@@ -437,6 +449,7 @@ img.Content-img {
   text-decoration: none;
   color: black;
   font-size: 13px;
+  line-height: 20px;
 }
 
 .col.l-12.Content-right-item {
@@ -860,6 +873,7 @@ text-align: center;
 .sort-price-mobile select{
   outline: none;
   border: none;
+  background-color: transparent;
 }
 
 .sort-price-mobile{

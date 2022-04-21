@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Payment.css"
 import CartResult from "../Cart/CartResult"
 import { useSelector } from "react-redux";
@@ -11,6 +11,10 @@ const [isPayinShop, SetisPayinShop] = useState(true);
 function handleChangeOption(value) {
     SetisPayinShop(value);
 }
+
+useEffect(()=>{
+  window.scrollTo(0, 0)
+},[])
 
   return (
 

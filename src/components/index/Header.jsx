@@ -35,10 +35,18 @@ function Header(props) {
   useEffect(() => {
           (async function () {
           // _limit=10&_page=1
-            const paramsString = queryString.stringify(filters)
-            // console.log(paramsString);
-            let dbLaptop = await postApi.getAll(`/filters?${paramsString}`, {
-              _start: 20,
+            // const paramsString = queryString.stringify(filters)
+            const paramsString = parseToParams(filters)
+
+            console.log(paramsString);
+            
+
+            if(filters.name_like===''){
+              SetFilterLaptop([]);
+            }
+            if(filters.name_like){
+               let dbLaptop = await postApi.getAll(`/filters?${paramsString}`, {
+              _start: 0,
               _limit: 10,
             })
       
@@ -46,6 +54,9 @@ function Header(props) {
               if (dbLaptop) {
                 SetisLoading(true);
               }
+            }
+            
+           
         })();
 
 
@@ -88,9 +99,12 @@ function Header(props) {
 
    typingTimeoutRef.current = setTimeout(()=>{
       setFilters({
-      name_like :e.target.value
+      name_like :e.target.value.replace(/\+/g, ' ')   
+      // replace(/\+/g, ' ')  chuyển khoảng trắng sang dấu cộng
       })
   },300)
+
+  
   }
 
   function showSumProduct(cart) {
@@ -125,6 +139,18 @@ function handleLogout() {
 function handleOpenHeaderNavbar(value) {
   SetisOpenHeaderNavbar(value)
 }
+
+function parseToParams(filter) {
+  let array =[];
+  for(const key in filter){
+    if(filter[key]){
+      array.push(`${key}=${filter[key]}`)
+    }
+  }
+  return array.join('&')  
+}
+
+
   return (
     <div className={ScrollDown ? "Header Header-down" : "Header Header-up"}>
       <div className="Container grid wide">
@@ -226,7 +252,7 @@ function handleOpenHeaderNavbar(value) {
                   <div className="row">
                      <div className="col l-12">
                      <NavLink to="/Cart"> 
-                       <button className="Cart-btn-add-products">
+                       <button className="Cart-btn-add-products-total">
                         Giỏ hàng: {currencyFormat(showSumMoney(cart))} ₫
                       </button>
                       </NavLink>
@@ -297,17 +323,17 @@ function handleOpenHeaderNavbar(value) {
       </div>
       <div className={isOpenHeaderNavbar ? "Header-mobile-navbar Header-mobile-navbar-active":"Header-mobile-navbar"}>
       <div className="Header-mobile-navbar-container">
-        <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/"><i class="fas fa-home-lg-alt"></i> Trang chủ </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
-        <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/PageAllLaptop"><i class="fas fa-laptop"></i> Laptop </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
-        <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/PageAllPC"><i class="fas fa-desktop"></i> PC </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
-        <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/PageAllAccessory"><i class="fas fa-keyboard"></i> Bàn phím </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
-        <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/PageAllMouse"><i class="fas fa-mouse"></i> Chuột </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
-        <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/PageAllBalo"><i class="fas fa-backpack"></i> Balo </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
+        <NavLink to="/"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i class="fas fa-home-lg-alt"></i> Trang chủ <i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
+        <NavLink to="/PageAllLaptop"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i class="fas fa-laptop"></i> Laptop<i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div> </NavLink>
+        <NavLink to="/PageAllPC"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i class="fas fa-desktop"></i> PC <i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
+        <NavLink to="/PageAllAccessory"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i class="fas fa-keyboard"></i> Bàn phím <i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
+        <NavLink to="/PageAllMouse"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i class="fas fa-mouse"></i> Chuột <i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
+        <NavLink to="/PageAllBalo"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i class="fas fa-backpack"></i> Balo <i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
       </div>
       <div className="Header-mobile-navbar-container">
-      <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/Login">Đăng nhập </NavLink></div>
-      <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/Registration">Đăng ký </NavLink></div>
-      <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><NavLink to="/PageNews"><i class="fas fa-newspaper"></i> Tin tức </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
+      <NavLink to="/Login"> <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page">Đăng nhập </div></NavLink>
+      <NavLink to="/Registration"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page">Đăng ký </div></NavLink>
+      <NavLink to="/PageNews"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i class="fas fa-newspaper"></i> Tin tức <i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
       </div>
 
       <div className="Header-mobile-navbar-Hotline">

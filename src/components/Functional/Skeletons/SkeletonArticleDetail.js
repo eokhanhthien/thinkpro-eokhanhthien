@@ -8,7 +8,7 @@ function SkeletonArticleDetail(props) {
         <div className="row mt-50">
           <div className="col l-1 dis-padding">
             <div className=" Size-logo">
-            <SkeletonsElement type="img-full"></SkeletonsElement>
+            <SkeletonsElement type="text"></SkeletonsElement>
             </div>
           </div>
           <div className="col l-1"><span>/ Laptop</span></div>
@@ -95,7 +95,7 @@ function SkeletonArticleDetail(props) {
                   <div className="col l-8  c-8 m-8 Detail-custom-text-content"><SkeletonsElement type="text"></SkeletonsElement></div> 
                   <div className="col l-4 c-4 m-4"><SkeletonsElement type="text"></SkeletonsElement></div>
                 </div>
-                <div className="col l-12 boder-bt" />
+     
                 <div className="row">
                 <SkeletonsElement type="text"></SkeletonsElement><span className="Detail-color-text-blue"> <SkeletonsElement type="text"></SkeletonsElement></span>
                 </div>

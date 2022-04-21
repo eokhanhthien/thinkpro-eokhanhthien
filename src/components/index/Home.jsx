@@ -526,27 +526,7 @@ function Home(props) {
 
 
       </div>
-      
-      {/* <div className="Header-mobile-navbar">
-      <div className="Header-mobile-navbar-container">
-        <div className="Header-mobile-navbar-page"><NavLink to="/"><i class="fas fa-home-lg-alt"></i> Trang chủ </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
-        <div className="Header-mobile-navbar-page"><NavLink to="/PageAllLaptop"><i class="fas fa-laptop"></i> Laptop </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
-        <div className="Header-mobile-navbar-page"><NavLink to="/PageAllPC"><i class="fas fa-desktop"></i> PC </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
-        <div className="Header-mobile-navbar-page"><NavLink to="/PageAllAccessory"><i class="fas fa-headphones-alt"></i> Phụ kiện </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
-      </div>
-      <div className="Header-mobile-navbar-container">
-      <div className="Header-mobile-navbar-page"><NavLink to="/Login">Đăng nhập </NavLink></div>
-      <div className="Header-mobile-navbar-page"><NavLink to="/Registration">Đăng ký </NavLink></div>
-      <div className="Header-mobile-navbar-page"><NavLink to="/PageNews"><i class="fas fa-newspaper"></i> Tin tức </NavLink><i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div>
-      </div>
-
-      <div className="Header-mobile-navbar-Hotline">
-      <div class="Detail-sticky-hotline">Hotline</div>
-      <div class="Detail-sticky-hotline-number">1900.63.3579</div>
-      </div>
-      </div>
-      <div className="overlay"></div> */}
-      
+          
 
     </div>
   );

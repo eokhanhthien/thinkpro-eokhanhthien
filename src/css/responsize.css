@@ -978,6 +978,9 @@
 .Content-right-item {
   height: 65px !important; 
 }
+.Content-right-item-boder{
+  padding: 12px 10px 0 18px !important;
+}
 }
 /*Iphone(480 x 640)*/
 @media screen and (max-width: 320px){
