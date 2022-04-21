@@ -40,7 +40,7 @@ function handleDeleteItemFromCart(item) {
   handleOpenModal(false)
 }
 
-console.log(cart.cartItem.length)
+// console.log(cart.cartItem.length)
     return (
 <div className="Cart_container">
 <div className="grid wide">

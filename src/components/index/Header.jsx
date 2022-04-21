@@ -20,6 +20,8 @@ function Header(props) {
   const [ScrollDown, setScrollDown] = useState(false);
   const [isLoading, SetisLoading] = useState(false);
   const [isOpenHeaderNavbar, SetisOpenHeaderNavbar] = useState(false);
+  const [isSeachMobile, SetisSeachMobile] = useState(false);
+  const [isShowList, SetisShowList] = useState(false);
 
   const [searchTerm, setSearchTerm] = useState('');
   const typingTimeoutRef = useRef(null)
@@ -150,6 +152,18 @@ function parseToParams(filter) {
   return array.join('&')  
 }
 
+function handleIsSeachMobile(value) {
+  SetisSeachMobile(value)
+}
+
+function showList(value) {
+  SetisShowList(value)
+}
+
+function handleModalMobileSearch() {
+  handleIsSeachMobile(false)
+  SetisShowList(false) 
+}
 
   return (
     <div className={ScrollDown ? "Header Header-down" : "Header Header-up"}>
@@ -170,7 +184,7 @@ function parseToParams(filter) {
           </NavLink>
 
           </div>
-          <div className="col l-4 Header-search-container">
+          <div className="col l-4 Header-search-container hidden-search">
             <input
               className="Header-search"
               placeholder="Tìm kiếm trên ThinkPro"
@@ -198,12 +212,8 @@ function parseToParams(filter) {
             <img className="img-not-found-product" src="../../image/Product-Not-Found.png" alt="" />
             <div>Không tìm thấy sản phẩm thích hợp !</div>
             </>
-          }
-            
-           
-    
-
-            </div>
+          }      
+          </div>
 
             <div className="Modal_search">
             </div>
@@ -215,9 +225,48 @@ function parseToParams(filter) {
                 <i className="far fa-bell position-right-option-icon" /> 
             </NavLink>
 
-            <div className="icon-header-option-mobile border-search">
-            <i class="fas fa-search position-right-option-icon "></i>
-            </div>
+          <div onClick={()=>handleIsSeachMobile(true)} className="Search-for-mobile ">
+              
+            <input onClick={()=>showList(true)} onChange={handleSearchTermChange} className={isSeachMobile ? "icon-header-option-mobile-search border-search mobile-search-active" : "icon-header-option-mobile-search "}/>
+            <i class="fas fa-search position-right-option-icon iconsearch-Header-mobile"></i>
+            
+          <div className={isShowList ? "List-search-mobile List-search-mobile-active": "List-search-mobile"}>
+
+          {
+            FilterLaptop.length>0 ? 
+            FilterLaptop.map((item,index) =>{
+              return ( 
+                <div key={index} className="item-search-mobile">
+                    
+                    <div className="row">
+                   <NavLink to={`/DetailLaptop/${item.shared_url}/${item.cur_sku}`}> 
+                    <div className="col l-4 m-4 c-4">
+                       <div className="item-search-mobile-img">
+                       <img src={`https://lumen.thinkpro.vn/${item.thumbnail}`} />
+                       </div>
+                     </div>
+                      </NavLink> 
+                     <div className="col l-8 m-8 c-8 item-search-mobile-name"><NavLink to={`/DetailLaptop/${item.shared_url}/${item.cur_sku}`}> {item.name} </NavLink> </div>
+                   </div>
+                  
+                 
+                   
+                 </div> )
+            }) 
+            :
+            <>
+            <img className="img-not-found-product" src="../../image/Product-Not-Found.png" alt="" />
+            <div  className="Text-no-product">Không tìm thấy sản phẩm thích hợp !</div>
+            </>
+          }     
+
+           
+           
+
+
+          </div>
+               <div  onClick={()=>handleModalMobileSearch()} className={isShowList ?"Modal_search-mobile open_search":"Modal_search-mobile"}> </div>
+            </div>  
 
               <NavLink to="/Cart" className="icon-header-option-add-cart ">
                 <i className="fal fa-cart-plus position-right-option-icon icon_news" />
