@@ -15,7 +15,7 @@ function Btn_loading(props) {
     },[])
     return (
         <div>
-            <button class="action-btn" id="login-btn">
+            <button className="action-btn" id="login-btn">
             <i className="fal fa-cart-plus position-right-option-icon"> </i>
             <span >Thêm vào giỏ hàng</span>
             </button>

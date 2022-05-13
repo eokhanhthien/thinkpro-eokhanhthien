@@ -40,7 +40,7 @@ function Header(props) {
             // const paramsString = queryString.stringify(filters)
             const paramsString = parseToParams(filters)
 
-            console.log(paramsString);
+            // console.log(paramsString);
             
 
             if(filters.name_like===''){
@@ -228,7 +228,7 @@ function handleModalMobileSearch() {
           <div onClick={()=>handleIsSeachMobile(true)} className="Search-for-mobile ">
               
             <input onClick={()=>showList(true)} onChange={handleSearchTermChange} className={isSeachMobile ? "icon-header-option-mobile-search border-search mobile-search-active" : "icon-header-option-mobile-search "}/>
-            <i class="fas fa-search position-right-option-icon iconsearch-Header-mobile"></i>
+            <i className="fas fa-search position-right-option-icon iconsearch-Header-mobile"></i>
             
           <div className={isShowList ? "List-search-mobile List-search-mobile-active": "List-search-mobile"}>
 
@@ -290,7 +290,7 @@ function handleModalMobileSearch() {
                         {item.name}
                       </div>
                       <div className="Cart-number-products-name-price">
-                        {currencyFormat(item.price)} ₫ x {item.quantity}
+                        {currencyFormat(item.price)} ₫ x {item.cartQuantity}
                       </div>
                     </div>
                     </div>
@@ -312,7 +312,7 @@ function handleModalMobileSearch() {
               </NavLink>
 
               <div onClick={()=>handleOpenHeaderNavbar(true)} className="icon-header-option-mobile ">
-                <i class="fas fa-bars position-right-option-icon"></i>
+                <i className="fas fa-bars position-right-option-icon"></i>
               </div>
 
              {user.userInfo._delegate ? <div className="icon-header-option">
@@ -364,7 +364,7 @@ function handleModalMobileSearch() {
               }
 
             </div>
-            {/* <a class="Header-icon" href=""><i class="far fa-bell"></i></a>
+            {/* <a className="Header-icon" href=""><i class="far fa-bell"></i></a>
                 <a class="Header-icon" href=""><i class="fal fa-cart-plus"></i></a>
                 <a class="Header-icon" href=""><i class="far fa-user-circle"></i></a> */}
           </div>
@@ -372,22 +372,22 @@ function handleModalMobileSearch() {
       </div>
       <div className={isOpenHeaderNavbar ? "Header-mobile-navbar Header-mobile-navbar-active":"Header-mobile-navbar"}>
       <div className="Header-mobile-navbar-container">
-        <NavLink to="/"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i class="fas fa-home-lg-alt"></i> Trang chủ <i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
-        <NavLink to="/PageAllLaptop"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i class="fas fa-laptop"></i> Laptop<i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div> </NavLink>
-        <NavLink to="/PageAllPC"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i class="fas fa-desktop"></i> PC <i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
-        <NavLink to="/PageAllAccessory"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i class="fas fa-keyboard"></i> Bàn phím <i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
-        <NavLink to="/PageAllMouse"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i class="fas fa-mouse"></i> Chuột <i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
-        <NavLink to="/PageAllBalo"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i class="fas fa-backpack"></i> Balo <i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
+        <NavLink to="/"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i className="fas fa-home-lg-alt"></i> Trang chủ <i className="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
+        <NavLink to="/PageAllLaptop"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i className="fas fa-laptop"></i> Laptop<i className="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div> </NavLink>
+        <NavLink to="/PageAllPC"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i className="fas fa-desktop"></i> PC <i className="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
+        <NavLink to="/PageAllAccessory"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i className="fas fa-keyboard"></i> Bàn phím <i className="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
+        <NavLink to="/PageAllMouse"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i className="fas fa-mouse"></i> Chuột <i className="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
+        <NavLink to="/PageAllBalo"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i className="fas fa-backpack"></i> Balo <i className="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
       </div>
       <div className="Header-mobile-navbar-container">
       <NavLink to="/Login"> <div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page">Đăng nhập </div></NavLink>
       <NavLink to="/Registration"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page">Đăng ký </div></NavLink>
-      <NavLink to="/PageNews"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i class="fas fa-newspaper"></i> Tin tức <i class="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
+      <NavLink to="/PageNews"><div onClick={()=>handleOpenHeaderNavbar(false)} className="Header-mobile-navbar-page"><i className="fas fa-newspaper"></i> Tin tức <i className="fas fa-angle-right Header-mobile-navbar-page-icon"></i></div></NavLink>
       </div>
 
       <div className="Header-mobile-navbar-Hotline">
-      <div class="Detail-sticky-hotline">Hotline</div>
-      <div class="Detail-sticky-hotline-number">1900.63.3579</div>
+      <div className="Detail-sticky-hotline">Hotline</div>
+      <div className="Detail-sticky-hotline-number">1900.63.3579</div>
       </div>
       </div>
       <div onClick={()=>handleOpenHeaderNavbar(false)} className={isOpenHeaderNavbar ?"overlay overlay-active":"overlay"}></div>

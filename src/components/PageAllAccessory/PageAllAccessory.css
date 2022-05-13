@@ -72,15 +72,7 @@
     display: block;
 }
 
-.Option-checkbox-container{
-    /* overflow: auto; */
-    height: 600px;
-}
 
-.Option-checkbox-container::-webkit-scrollbar { 
-    width: 0 !important;
-    display: none; 
-  }
 
   .Content-2-container-product-col-12{
     border: 1px solid rgb(240, 237, 237);

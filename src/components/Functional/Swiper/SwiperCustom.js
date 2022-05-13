@@ -15,8 +15,8 @@ function SwiperCustom(props) {
     return (
         <div className="list">      
         <Swiper slidesPerView={3} navigation={true}>
-          {list.map((x) => (
-            <SwiperSlide key={x}>             
+          {list.map((x,index) => (
+            <SwiperSlide key={index}>             
               <div className="item">{x}</div>
             </SwiperSlide>
           ))}

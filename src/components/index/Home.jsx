@@ -169,11 +169,11 @@ function Home(props) {
                 },
                 // when window width is >= 640px
                 640: {
-                  slidesPerView: 4,
+                  slidesPerView: 3,
                 },
                 // when window width is >= 768px
                 768: {
-                  slidesPerView: 4,
+                  slidesPerView: 3,
                 },
                 1023: {
                   slidesPerView: 5,

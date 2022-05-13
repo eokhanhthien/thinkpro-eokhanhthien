@@ -5,7 +5,7 @@ import SkeletonsElement from "./SkeletonsElement";
 function SkeletonArticle(props) {
   return (
 
-<div className="col l-2-4 m-3 c-6 Content-2-container-product-item animation-shimmer">
+<div className="col l-2-4 m-4 c-6 Content-2-container-product-item animation-shimmer">
       
       
         <SkeletonsElement type="img-thumbnail"></SkeletonsElement>

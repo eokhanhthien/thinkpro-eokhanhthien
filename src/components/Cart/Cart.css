@@ -123,6 +123,7 @@ button.btnChangequantityCart {
   visibility: hidden;
   opacity: 0;
   transition: 0.3s;
+  z-index: 101;
 }
 
 .Modal_Cart_container{
@@ -138,6 +139,7 @@ button.btnChangequantityCart {
  visibility: hidden;
  opacity: 0;
  transition: 0.3s;
+ z-index: 102;
 }
 
 .isActiveModalcart{

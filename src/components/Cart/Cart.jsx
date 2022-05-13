@@ -106,7 +106,7 @@ function handleDeleteItemFromCart(item) {
 
   <div className={isOpenModal ? "Modal_Cart_overlay isActiveModalcart" : "Modal_Cart_overlay"}></div>
 <div className={isOpenModal ? "Modal_Cart_container isActiveModalcart" : "Modal_Cart_container"}>
-    <div><i class="fas fa-exclamation-circle icon_Modal_cart"></i></div>
+    <div><i className="fas fa-exclamation-circle icon_Modal_cart"></i></div>
     <div className='text_Modal_cart'>Bạn có chắc chắn muốn xóa sản phẩm khỏi giỏ hàng không?</div>
     <div className="row no-gutters  btn_Modal_cart">
       <button className='btn-item-option delete_cart' onClick={()=>handleDeleteItemFromCart(item)}>Xóa</button>
